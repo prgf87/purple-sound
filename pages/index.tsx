@@ -8,7 +8,7 @@ export default function Home() {
         <title>Purple Sound Company</title>
         <meta name="description" content="Purple Sound Company" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href=".images/img1.png" />
+        <link rel="icon" href="/images/img1.png" />
       </Head>
       <main>
         <section className="custom-img min-h-screen w-screen">
@@ -18,24 +18,6 @@ export default function Home() {
           <h1 className="text-2xl md:text-[50px] text-white flex justify-center items-center text-center tracking-widest sm:leading-[80px]">
             Company
           </h1>
-
-          {/* <div className="absolute right-10 top-10 h-[5rem] w-[5rem]">
-            <Image
-              src="/images/uc.png"
-              alt="Under Construction"
-              height={1920}
-              width={1724}
-            />
-          </div>
-          <div className="absolute left-10 top-10 h-[5rem] w-[5rem]">
-            <Image
-              src="/images/uc.png"
-              alt="Under Construction"
-              height={1920}
-              width={1724}
-            />
-          </div> */}
-
           <div className="pt-64 sm:pt-[32rem] lg:pt-[25rem] grid justify-center items-center text-center text-white text-lg sm:text-2xl pb-10">
             <div className="w-40 h-40 mx-auto">
               <Image
