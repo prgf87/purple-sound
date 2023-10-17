@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-[100px] text-white flex justify-center items-center pt-12 lg:pt-40 text-center tracking-widest leading-[50px]">
             Purple Sound
           </h1>
-          <h1 className="text-2xl md:text-[50px] text-white flex justify-center items-center text-center tracking-widest sm:leading-[80px]">
+          <h1 className="text-2xl md:text-[40px] text-white flex justify-center items-center text-center tracking-widest sm:leading-[75px]">
             Company
           </h1>
           <div className="pt-64 sm:pt-[32rem] lg:pt-[25rem] grid justify-center items-center text-center text-white text-lg sm:text-2xl pb-10">
@@ -30,7 +31,15 @@ export default function Home() {
             <h1 className="text-2xl sm:text-4xl">
               For more info, please contact us:
             </h1>
-            <p>Email: info@purplesoundco.com</p>
+            <p>
+              Email:{' '}
+              <Link
+                href={'mailto:info@purplesoundco.com'}
+                className="hover:underline"
+              >
+                info@purplesoundco.com
+              </Link>
+            </p>
           </div>
         </section>
       </main>
