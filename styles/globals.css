@@ -9,10 +9,11 @@
 }
 
 h1 {
+  text-shadow: -1px 2 black, 2 1px black, 1px 2 black, 2 -1px black;
   font-family: 'Bebas Neue', cursive;
 }
 
 .custom-img {
   background-image: url('/images/img2.jpg');
-  background-size: cover;
+  background-size: contain;
 }

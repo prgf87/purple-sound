@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/images/img1.png" />
       </Head>
       <main>
-        <section className="custom-img min-h-screen w-screen">
+        <section className="custom-img h-[100vh] w-[100vw]">
           <h1 className="text-5xl md:text-[100px] text-white flex justify-center items-center pt-12 lg:pt-40 text-center tracking-widest leading-[50px]">
             Purple Sound
           </h1>
