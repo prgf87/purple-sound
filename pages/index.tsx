@@ -1,3 +1,5 @@
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,7 +14,9 @@ export default function Home() {
         <link rel="icon" href="/images/img1.png" />
       </Head>
       <main>
-        <section className="custom-img h-[100vh] w-[100vw]">
+        <Header />
+        <Footer />
+        {/* <section className="custom-img h-[100vh] w-[100vw]">
           <h1 className="text-5xl md:text-[100px] text-white flex justify-center items-center pt-12 lg:pt-40 text-center tracking-widest leading-[50px]">
             Purple Sound
           </h1>
@@ -41,7 +45,7 @@ export default function Home() {
               </Link>
             </p>
           </div>
-        </section>
+        </section> */}
       </main>
     </>
   );
