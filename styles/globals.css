@@ -8,12 +8,16 @@
   box-sizing: border-box;
 }
 html {
-  @apply text-[#B5E2FA] bg-[#33294A];
+  @apply text-[#B5E2FA] bg-[#33294A]/70;
 }
 
 h1 {
   text-shadow: -1px 2 black, 2 1px black, 1px 2 black, 2 -1px black;
   font-family: 'Bebas Neue', cursive;
+}
+
+.btn {
+  @apply border border-black px-8 py-2 rounded-full bg-[#33294A] text-white uppercase font-semibold hover:brightness-110;
 }
 
 .custom-img {
