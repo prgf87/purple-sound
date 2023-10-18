@@ -13,13 +13,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/img1.png" />
       </Head>
-      <main>
+      <main className="overflow-x-hidden">
         <div className="fixed left-0 top-0 right-0 z-10">
           <Header />
         </div>
-        <div>
+        <div id="hero">
           <Hero />
           <Intro />
+        </div>
+        <div>
           <Footer />
           {/* <section className="custom-img h-[100vh] w-[100vw]">
           <h1 className="text-5xl md:text-[100px] text-white flex justify-center items-center pt-12 lg:pt-40 text-center tracking-widest leading-[50px]">
