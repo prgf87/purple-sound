@@ -8,7 +8,11 @@ type Props = {};
 function Hero({}: Props) {
   return (
     <div className="absolute left-0 top-0 right-0 bottom-0 flex justify-center items-center overflow-hidden">
-      <Image src={img} alt="/" className="w-[100%]" />
+      <Image
+        src={img}
+        alt="Website logo of a purple sphere"
+        className="object-cover h-[100vh]"
+      />
       <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/70" />
       <div className="absolute flex">
         <h1 className="text-7xl">Purple Sound</h1>
