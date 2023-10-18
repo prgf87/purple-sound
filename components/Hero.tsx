@@ -2,13 +2,14 @@ import Image from 'next/image';
 import React from 'react';
 // import videoBg from '@/public/video/';
 import Link from 'next/link';
+import ContactButton from './ContactButton';
 
 type Props = {};
 
 function Hero({}: Props) {
   return (
     <div>
-      <div className="h-[100vh] relative left-0 top-0 right-0 bottom-0 flex justify-center items-center overflow-hidden">
+      <div className="h-[100vh] w-[100vw] relative left-0 top-0 right-0 bottom-0 flex justify-center items-center overflow-hidden">
         <video
           muted
           playsInline
@@ -25,9 +26,7 @@ function Hero({}: Props) {
           <h2 className="text-xs pt-1 uppercase">Company</h2>
         </div>
         <p></p>
-        <Link href="/contact" className="btn absolute bottom-20">
-          Contact Me
-        </Link>
+        <ContactButton />
       </div>
     </div>
   );
