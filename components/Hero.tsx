@@ -14,7 +14,7 @@ function Hero({}: Props) {
           playsInline
           autoPlay
           loop
-          className="object-cover w-[100vw]"
+          className="object-cover h-[100vh] scale-125"
         >
           <source src="/video/bgvideo.mp4" type="video/mp4" />
         </video>
