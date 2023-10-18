@@ -30,6 +30,9 @@ h1 {
   @apply flex items-center text-xl;
 }
 
+.header-link {
+  @apply text-sm hover:brightness-90 active:brightness-110;
+}
 .error {
   @apply text-[#F34213];
 }

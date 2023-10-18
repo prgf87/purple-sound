@@ -8,7 +8,7 @@ function Footer({}: Props) {
     <div className="w-full relative py-20 border-t-2 flex justify-center items-center text-center">
       <div className="grid mx-auto">
         <Link href={'#hero'}>
-          <h1 className="text-4xl">Purple Sound Company</h1>
+          <h1 className="text-4xl hover:underline">Purple Sound Company</h1>
         </Link>
         <p className="text-xl uppercase">
           &copy; Copyright {new Date().getFullYear()}
