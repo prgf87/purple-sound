@@ -7,6 +7,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  @apply text-[#B5E2FA] bg-[#33294A];
+}
 
 h1 {
   text-shadow: -1px 2 black, 2 1px black, 1px 2 black, 2 -1px black;
@@ -16,4 +19,16 @@ h1 {
 .custom-img {
   background-image: url('/images/img2.jpg');
   background-size: contain;
+}
+
+.error {
+  @apply text-[#F34213];
+}
+
+.success {
+  @apply text-[#136F63];
+}
+
+.warning {
+  @apply text-[#E0CA3C];
 }
