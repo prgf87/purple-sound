@@ -1,8 +1,8 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import Intro from '@/components/Intro';
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -14,7 +14,13 @@ export default function Home() {
         <link rel="icon" href="/images/img1.png" />
       </Head>
       <main>
-        <Header />
+        <div className="fixed left-0 top-0 right-0 z-10">
+          <Header />
+        </div>
+
+        <Hero />
+
+        <Intro />
         <Footer />
         {/* <section className="custom-img h-[100vh] w-[100vw]">
           <h1 className="text-5xl md:text-[100px] text-white flex justify-center items-center pt-12 lg:pt-40 text-center tracking-widest leading-[50px]">
