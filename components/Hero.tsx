@@ -7,7 +7,7 @@ type Props = {};
 
 function Hero({}: Props) {
   return (
-    <div className="relative left-0 top-0 right-0 bottom-0 h-[100vh] w-[100vw] flex justify-center items-center overflow-hidden">
+    <div className="left-0 top-0 right-0 bottom-0 h-[100vh] w-[100vw] flex justify-center items-center overflow-hidden">
       <video
         muted
         playsInline
