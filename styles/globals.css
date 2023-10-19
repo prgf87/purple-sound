@@ -40,6 +40,10 @@ h3 {
   @apply flex justify-center items-center text-lg tracking-tighter;
 }
 
+.service-box {
+  @apply border border-spacing-1 border-slate-300/70 bg-slate-900/20 p-4 rounded-3xl shadow-lg m-5;
+}
+
 .header-link {
   @apply text-sm hover:brightness-90 active:brightness-110;
 }
