@@ -19,6 +19,8 @@ export default function Home() {
         </div>
         <div id="hero">
           <Hero />
+        </div>
+        <div id="intro">
           <Intro />
         </div>
         <div>
