@@ -15,7 +15,7 @@ function Hero({}: Props) {
         loop
         className="object-cover h-[100vh] scale-125"
       >
-        <source src="/video/bgvideo.mp4" type="video/mp4" />
+        <source src="/video/bgvideo-comp.mp4" type="video/mp4" />
       </video>
       <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/70" />
       <div className="absolute flex">
