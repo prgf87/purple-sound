@@ -38,7 +38,7 @@ function Header({}: Props) {
   return (
     <div
       style={{ backgroundColor: `${color}`, color: `${textColor}` }}
-      className="flex justify-between items-center py-6 px-10 ease-in-out duration-300"
+      className="flex justify-between items-center py-4 px-10 ease-in-out duration-300"
     >
       {/* <div>Logo</div> */}
       <Link

@@ -1,12 +1,10 @@
 import Banner from '@/components/Banner';
 import Hero from '@/components/Hero';
-import Intro from '@/components/Intro';
 import Head from 'next/head';
-import data from '@/data/intro.json';
+import Brands from '@/components/Brands';
+import Banners from '@/components/Banners';
 
 export default function Home() {
-  // console.log(data.intro.banners);
-  const { banners } = data.intro;
   return (
     <>
       <Head>
@@ -19,26 +17,9 @@ export default function Home() {
         <div id="hero">
           <Hero />
         </div>
-        <div id="intro">
-          {banners.map((ban, i) => {
-            return (
-              <Banner
-                key={i}
-                customBg={ban.customBg}
-                heading={ban.heading}
-                message={ban.message}
-              />
-            );
-          })}
-          {/* <Banner customBg="custom-img" heading="experience audio excellence" />
-        <Banner
-          customBg="custom-img3"
-          heading="Innovative Acoustic Solutions"
-        />
-        <Banner customBg="custom-img4" heading="High-Fidelity Audio Systems" />
-        <Banner customBg="custom-img2" heading="immersive audio experiences" /> */}
-
-          {/* <Intro /> */}
+        <div id="banners">
+          <Banners />
+          <Brands />
         </div>
       </main>
     </>
