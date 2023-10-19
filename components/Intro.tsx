@@ -11,7 +11,7 @@ type Props = {};
 function Intro({}: Props) {
   return (
     <div className="relative min-h-[100vh] p-10  bg-[#33294A]/30">
-      <div className="border rounded-3xl p-20 max-w-7xl mx-auto">
+      <div className="border rounded-3xl p-20 max-w-7xl mx-auto bg-[#33294A]/70">
         <h1 className="text-center text-5xl sm:text-7xl pb-4">
           Experience Audio Excellence
         </h1>
@@ -31,13 +31,13 @@ function Intro({}: Props) {
       </div>
       <div className="grid md:grid-cols-2 mx-auto max-w-7xl gap-5">
         <div className="intro-boxes-img">
-          <Image src={img1} className="object-contain h-80" alt="/" />
+          <Image src={img1} className="object-contain max-h-80" alt="/" />
         </div>
         <div className="intro-boxes-p flex-col">
           <h3 className="text-3xl pb-6 uppercase">
             Professional Audio Solutions
           </h3>
-          <p className="text-xl px-4 text-justify">
+          <p className="text-base px-4">
             From recording studios to live events, our professional-grade
             equipment ensures that every note and sound is captured with
             unparalleled clarity.
@@ -54,10 +54,10 @@ function Intro({}: Props) {
           </p>
         </div>
         <div className="intro-boxes-img">
-          <Image src={img2} className="object-contain h-80" alt="/" />
+          <Image src={img2} className="object-contain max-h-80" alt="/" />
         </div>
         <div className="intro-boxes-img">
-          <Image src={img3} className="object-contain h-80" alt="/" />
+          <Image src={img3} className="object-contain max-h-80" alt="/" />
         </div>
         <div className="intro-boxes-p">
           <p>
@@ -76,7 +76,7 @@ function Intro({}: Props) {
           </p>
         </div>
         <div className="intro-boxes-img">
-          <Image src={img4} className="object-contain h-80" alt="/" />
+          <Image src={img4} className="object-contain max-h-80" alt="/" />
         </div>
       </div>
     </div>
