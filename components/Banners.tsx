@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from './Banner';
-import data from '@/data/intro.json';
+import data from '@/data/data.json';
 
 type Props = {};
 
