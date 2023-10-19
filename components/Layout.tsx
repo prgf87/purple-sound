@@ -7,7 +7,7 @@ type Props = { children: any };
 function Layout({ children }: Props) {
   return (
     <div>
-      <div className="fixed left-0 top-0 right-0 z-10">
+      <div className="fixed left-0 top-0 right-0 z-50">
         <Header />
       </div>
       <main>{children}</main>
