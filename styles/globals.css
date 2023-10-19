@@ -57,3 +57,9 @@ h3 {
 .warning {
   @apply text-[#E0CA3C];
 }
+
+.custom-img {
+  background-image: url('/images/gallery/7.jpg');
+  background-position: center;
+  background-size: cover;
+}
