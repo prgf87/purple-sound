@@ -41,7 +41,10 @@ function Header({}: Props) {
       className="flex justify-between items-center py-6 px-10 ease-in-out duration-300"
     >
       {/* <div>Logo</div> */}
-      <div className="border-2 border-gray-300/10 rounded-full hover:border-gray-300/20 active:border-gray-300/40">
+      <Link
+        href={'/'}
+        className="border-2 border-gray-300/10 rounded-full hover:border-gray-300/20 active:border-gray-300/40"
+      >
         <Image
           src="/images/img1.png"
           width={50}
@@ -49,7 +52,7 @@ function Header({}: Props) {
           alt="/"
           className="object-cover h-10 w-10 rounded-full"
         />
-      </div>
+      </Link>
       <div>
         <ul className="flex space-x-5">
           <li className="header-link">
