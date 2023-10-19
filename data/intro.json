@@ -26,37 +26,37 @@
       {
         "name": "Funktion One",
         "link": "https://funktion-one.com/",
-        "image": "/images/brands/f1.png"
+        "image": "/images/brands/funktion-white.png"
       },
       {
         "name": "Martin Audio",
         "link": "https://martin-audio.com/",
-        "image": "/images/brands/martin-audio.png"
+        "image": "/images/brands/ma-white.png"
       },
       {
         "name": "Pioneer",
-        "link": "https://www.pioneer.eu/https://www.pioneer.eu/",
-        "image": "/images/brands/pioneer.jpg"
+        "link": "https://www.pioneer.eu/",
+        "image": "/images/brands/pioneer-white.svg"
       },
       {
-        "name": "Alan&Heath",
+        "name": "Allen&Heath",
         "link": "https://www.allen-heath.com/",
-        "image": "/images/brands/aNh.png"
+        "image": "/images/brands/allen-white.png"
       },
       {
         "name": "ffa",
         "link": "http://www.fullfataudio.com/",
-        "image": "/images/brands/ffa.png"
+        "image": "/images/brands/ffa-white.png"
       },
       {
         "name": "Matrix",
         "link": "https://www.matrix-digi.com/",
-        "image": "/images/brands/matrix.jpg"
+        "image": "/images/brands/matrix-white.png"
       },
       {
         "name": "Midas",
         "link": "https://www.midasconsoles.com/",
-        "image": "/images/brands/midas.png"
+        "image": "/images/brands/midas-white.webp"
       }
     ]
   }

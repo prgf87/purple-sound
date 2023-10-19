@@ -30,6 +30,10 @@ h3 {
   @apply border-2 border-black/10 px-8 py-2 rounded-full bg-[#33294A] text-white uppercase font-semibold hover:brightness-110 hover:border-black/30 active:border-black/50 transition-all duration-100;
 }
 
+.btn2 {
+  @apply border-2 border-black/10 px-8 py-2 rounded-2xl bg-[#33294A]/10 text-white uppercase font-semibold hover:brightness-110 hover:border-black/30 active:border-black/50 transition-all duration-100 text-xs;
+}
+
 .intro-boxes-img,
 .intro-boxes-p {
   @apply border border-spacing-1 border-slate-300/70 bg-slate-900/20 p-4 rounded-3xl shadow-lg m-5;
@@ -44,7 +48,7 @@ h3 {
 }
 
 .header-link {
-  @apply text-sm hover:brightness-90 active:brightness-110;
+  @apply text-xs hover:brightness-90 active:brightness-110 uppercase tracking-wider;
 }
 .error {
   @apply text-[#F34213];

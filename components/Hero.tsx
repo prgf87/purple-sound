@@ -26,7 +26,7 @@ function Hero({}: Props) {
       <p></p>
       <ContactButton />
       <Link
-        href={'#intro'}
+        href={'#banners'}
         className="absolute bottom-4 animate-bounce text-white"
       >
         <SlArrowDown />
