@@ -7,7 +7,7 @@ type Props = {};
 
 function Hero({}: Props) {
   return (
-    <div className="h-[100vh] w-[100vw] relative left-0 top-0 right-0 bottom-0 flex justify-center items-center overflow-hidden">
+    <div className="relative left-0 top-0 right-0 bottom-0 h-[70vh] w-[100vw] flex justify-center items-center overflow-hidden">
       <video
         muted
         playsInline
@@ -27,7 +27,7 @@ function Hero({}: Props) {
       <ContactButton />
       <Link
         href={'#intro'}
-        className="absolute bottom-20 animate-bounce text-white"
+        className="absolute bottom-4 animate-bounce text-white"
       >
         <SlArrowDown />
       </Link>

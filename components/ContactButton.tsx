@@ -5,7 +5,7 @@ type Props = {};
 
 const ContactButton = (props: Props) => {
   return (
-    <div className="btn absolute bottom-40">
+    <div className="btn absolute bottom-20">
       <Link href="/contact">Contact Me</Link>
     </div>
   );
