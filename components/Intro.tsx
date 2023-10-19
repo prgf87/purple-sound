@@ -11,22 +11,24 @@ type Props = {};
 function Intro({}: Props) {
   return (
     <div className="relative min-h-[100vh] p-10  bg-[#33294A]/30">
-      <div className="border rounded-3xl p-20 max-w-7xl mx-auto bg-[#33294A]/70">
-        <h1 className="text-center text-5xl sm:text-7xl pb-4">
+      <div className="border rounded-3xl py-8 px-20 max-w-7xl grid mx-auto bg-[#33294A]/70">
+        {/* <h1 className="text-center text-5xl sm:text-7xl pb-4">
           Experience Audio Excellence
-        </h1>
-        <h2 className="text-center px-8 text-2xl sm:px-32 py-4 pb-6">
+        </h1> */}
+        <h2 className="text-center px-8 text-2xl sm:px-10 py-4 pb-6">
           Here at Purple Sound Company, we are passionate about revolutionizing
-          the way you experience audio. With over 3 years experience in the
-          industry, we have honed our expertise in providing cutting-edge audio
-          solutions that redefine clarity, precision, and immersion.
+          the way you experience audio.
+        </h2>
+        <h2 className="text-center px-8 text-2xl sm:px-10 py-4 pb-6">
+          With over 3 years experience in the industry, we have honed our
+          expertise in providing cutting-edge audio solutions that redefine
+          clarity, precision, and immersion.
         </h2>
 
-        <h2 className="text-center px-8 text-2xl sm:px-32 py-4 pb-6">
-          Discover a new dimension of audio excellence with Purple Sound
-          Company. Whether you&apos;re seeking state-of-the-art sound systems,
-          acoustical consulting, or bespoke solutions, we invite you to embark
-          on a journey of sonic perfection with us.
+        <h2 className="text-center px-8 text-2xl sm:px-10 py-4 pb-6">
+          Whether you&apos;re seeking state-of-the-art sound systems, acoustical
+          consulting, or bespoke solutions, we invite you to embark on a journey
+          of sonic perfection with us.
         </h2>
       </div>
       <div className="grid md:grid-cols-2 mx-auto max-w-7xl gap-5">
