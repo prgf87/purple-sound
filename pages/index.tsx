@@ -1,6 +1,4 @@
 import Banner from '@/components/Banner';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Intro from '@/components/Intro';
 import Head from 'next/head';

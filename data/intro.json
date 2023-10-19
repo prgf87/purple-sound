@@ -1,0 +1,21 @@
+{
+  "intro": {
+    "banners": [
+      {
+        "index": 1,
+        "heading": "blahblahblah",
+        "message": "messageblablahblah"
+      },
+      {
+        "index": 2,
+        "heading": "blahblahblah",
+        "message": "messageblablahblah"
+      },
+      {
+        "index": 3,
+        "heading": "blahblahblah",
+        "message": "messageblablahblah"
+      }
+    ]
+  }
+}
