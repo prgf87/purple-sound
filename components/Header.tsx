@@ -7,7 +7,7 @@ type Props = {};
 function Header({}: Props) {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState('transparent');
-  const [textColor, setTextColor] = useState('white');
+  const [textColor, setTextColor] = useState('#B5E2FA');
 
   const handleNav = () => {
     setNav(!nav);
@@ -25,18 +25,21 @@ function Header({}: Props) {
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
-        setColor('#ffffff');
-        setTextColor('#000000');
+        setColor('#33294A');
+        setTextColor('#ffffff');
       } else {
         setColor('transparent');
-        setTextColor('#ffffff');
+        setTextColor('#B5E2FA');
       }
     };
     window.addEventListener('scroll', changeColor);
   }, []);
 
   return (
-    <div className="flex justify-between items-center py-6 px-10">
+    <div
+      style={{ backgroundColor: `${color}`, color: `${textColor}` }}
+      className="flex justify-between items-center py-6 px-10 ease-in-out duration-300"
+    >
       {/* <div>Logo</div> */}
       <div className="border-2 border-gray-300/10 rounded-full hover:border-gray-300/20 active:border-gray-300/40">
         <Image
