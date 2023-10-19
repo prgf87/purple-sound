@@ -18,7 +18,13 @@ export default function Home() {
         <div id="hero">
           <Hero />
         </div>
-        <Banner />
+        <Banner customBg="custom-img" heading="experience audio excellence" />
+        <Banner
+          customBg="custom-img3"
+          heading="Innovative Acoustic Solutions"
+        />
+        <Banner customBg="custom-img4" heading="High-Fidelity Audio Systems" />
+        <Banner customBg="custom-img2" heading="immersive audio experiences" />
         <div id="intro">
           <Intro />
         </div>

@@ -63,3 +63,21 @@ h3 {
   background-position: center;
   background-size: cover;
 }
+
+.custom-img2 {
+  background-image: url('/images/gallery/8.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.custom-img3 {
+  background-image: url('/images/gallery/9.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.custom-img4 {
+  background-image: url('/images/gallery/10.jpg');
+  background-position: center;
+  background-size: cover;
+}
