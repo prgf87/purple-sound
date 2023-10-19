@@ -2,24 +2,24 @@
   "intro": {
     "banners": [
       {
-        "heading": "Experience Audio Excellence",
-        "message": "Discover a new dimension of audio excellence with Purple Sound Company. Whether you're seeking state-of-the-art sound systems, acoustical consulting, or bespoke solutions, we invite you to embark on a journey of sonic perfection with us.",
-        "customBg": "custom-img"
+        "heading": "High-Fidelity Audio Systems",
+        "message": "Immerse yourself in a world of unparalleled sound quality with our range of high-fidelity audio systems, designed to reproduce music and audio content with utmost precision.",
+        "customBg": "custom-img4"
       },
       {
-        "heading": "Professional Audio Solutions",
+        "heading": "Experience Professional Audio",
         "message": "From recording studios to live events, our professional-grade equipment ensures that every note and sound is captured with unparalleled clarity.",
         "customBg": "custom-img2"
+      },
+      {
+        "heading": "Discover Audio Excellence",
+        "message": "Whether you're seeking state-of-the-art sound systems, acoustical consulting, or bespoke solutions, we invite you to embark on a journey of sonic perfection with us.",
+        "customBg": "custom-img"
       },
       {
         "heading": "Innovative Acoustic Solutions",
         "message": "Elevate your space with our cutting-edge acoustic treatments, meticulously engineered to enhance sound quality and eliminate unwanted noise.",
         "customBg": "custom-img3"
-      },
-      {
-        "heading": "High-Fidelity Audio Systems",
-        "message": "Immerse yourself in a world of unparalleled sound quality with our range of high-fidelity audio systems, designed to reproduce music and audio content with utmost precision.",
-        "customBg": "custom-img4"
       }
     ],
     "brands": [
@@ -41,7 +41,7 @@
       {
         "name": "Allen&Heath",
         "link": "https://www.allen-heath.com/",
-        "image": "/images/brands/allen-white.png"
+        "image": "/images/brands/aNh.png"
       },
       {
         "name": "ffa",
@@ -58,6 +58,7 @@
         "link": "https://www.midasconsoles.com/",
         "image": "/images/brands/midas-white.jpg"
       }
-    ]
+    ],
+    "process": []
   }
 }

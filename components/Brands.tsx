@@ -1,6 +1,7 @@
 import React from 'react';
-import data from '@/data/intro.json';
+import data from '@/data/data.json';
 import Brand from './Brand';
+import ContactButton from './ContactButton';
 
 type Props = {};
 
@@ -10,7 +11,7 @@ function Brands({}: Props) {
   return (
     <div className="relative py-20 text-center bg-[#33294A]/30">
       <h1 className="text-6xl">some of the Brands we work with</h1>
-      <div className="flex flex-1 flex-wrap space-x-2 justify-evenly items-center">
+      <div className="flex flex-1 flex-wrap space-x-2 justify-around items-center">
         {brands
           .sort((a, b) => {
             return a.name.localeCompare(b.name);
@@ -26,6 +27,9 @@ function Brands({}: Props) {
               </div>
             );
           })}
+      </div>
+      <div className="flex justify-center items-center pt-20">
+        <ContactButton />
       </div>
     </div>
   );
