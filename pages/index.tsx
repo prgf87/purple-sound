@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import Head from 'next/head';
 import Brands from '@/components/Brands';
 import Banners from '@/components/Banners';
+import Process from '@/components/Process';
 
 export default function Home() {
   return (
@@ -19,7 +20,12 @@ export default function Home() {
         </div>
         <div id="banners">
           <Banners />
+        </div>
+        <div id="brands">
           <Brands />
+        </div>
+        <div id="process">
+          <Process />
         </div>
       </main>
     </>
