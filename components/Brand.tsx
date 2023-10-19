@@ -12,7 +12,7 @@ function Brand({ link, image, name }: Props) {
         alt={name}
         width={160}
         height={50}
-        className="object-contain max-h-20 pb-4"
+        className="object-contain h-40 pb-4"
         style={{ color: 'white' }}
       />
       {/* <span className="btn2">{brand.name}</span> */}
