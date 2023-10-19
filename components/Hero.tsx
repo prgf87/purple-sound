@@ -1,8 +1,7 @@
-import Image from 'next/image';
 import React from 'react';
-// import videoBg from '@/public/video/';
-import Link from 'next/link';
 import ContactButton from './ContactButton';
+import { SlArrowDown } from 'react-icons/sl';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -27,6 +26,12 @@ function Hero({}: Props) {
         </div>
         <p></p>
         <ContactButton />
+        <Link
+          href={'#intro'}
+          className="absolute bottom-2 animate-bounce text-white"
+        >
+          <SlArrowDown />
+        </Link>
       </div>
     </div>
   );
