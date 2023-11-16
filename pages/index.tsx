@@ -1,4 +1,3 @@
-import Banner from '@/components/Banner';
 import Hero from '@/components/Hero';
 import Head from 'next/head';
 import Brands from '@/components/Brands';
