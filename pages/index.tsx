@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Brands from '@/components/Brands';
 import Banners from '@/components/Banners';
 import Process from '@/components/Process';
+import Contact from '@/components/Contact';
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
         </div>
         <div id="process">
           <Process />
+        </div>
+        <div id="contact">
+          <Contact />
         </div>
       </main>
     </>
