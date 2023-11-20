@@ -27,12 +27,12 @@ function Process({}: Props) {
                 vision, goals, and space.
               </p>
             </div>
-            <div className="process-wrap-img-r">
+            <div className="process-wrap">
               <Image src={img1} alt={'brand image'} className="process-img" />
             </div>
           </div>
           <div className="process">
-            <div className="process-wrap-img-l">
+            <div className="process-wrap">
               <Image src={img2} alt={'brand image'} className="process-img" />
             </div>
             <div className="process-wrap">

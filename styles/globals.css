@@ -53,15 +53,11 @@ h3 {
 }
 
 .process {
-  @apply bg-[#33294A]/90 rounded-2xl min-h-[350px] p-10 m-4 shadow-xl border border-gray-600/30 grid grid-cols-2 space-x-8;
+  @apply bg-[#33294A]/90 rounded-2xl min-h-[350px] p-10 m-4 shadow-xl border border-gray-600/30 grid grid-cols-2 gap-x-8;
 }
 
 .process-wrap {
   @apply m-auto;
-}
-
-.process-wrap-img-r {
-  @apply pr-4;
 }
 
 .process-img {
@@ -78,6 +74,10 @@ h3 {
 
 .warning {
   @apply text-[#E0CA3C];
+}
+
+.input-field {
+  @apply w-[100vw] p-2 m-20;
 }
 
 .custom-img {
