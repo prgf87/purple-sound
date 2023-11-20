@@ -53,7 +53,15 @@ h3 {
 }
 
 .process {
-  @apply bg-[#33294A]/90 rounded-2xl p-10 m-4 shadow-xl border border-gray-600/30;
+  @apply bg-[#33294A]/90 rounded-2xl p-10 m-4 shadow-xl border border-gray-600/30 grid grid-cols-2 space-x-8;
+}
+
+.process-wrap {
+  @apply m-auto;
+}
+
+.process-img {
+  @apply w-full h-60 object-cover object-center;
 }
 
 .error {
