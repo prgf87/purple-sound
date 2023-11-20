@@ -79,7 +79,7 @@ function Process({}: Props) {
             <div className="process-wrap">
               <Image src={img5} alt={'brand image'} className="process-img" />
             </div>
-            <section></section>
+            <section>Hello</section>
           </div>
         </section>
       </div>
