@@ -14,6 +14,7 @@ html {
 h1 {
   text-shadow: -1px 2 black, 2 1px black, 1px 2 black, 2 -1px black;
   font-family: 'Bebas Neue', cursive;
+  @apply tracking-tight text-7xl uppercase;
 }
 
 h2 {
@@ -50,6 +51,11 @@ h3 {
 .header-link {
   @apply text-xs hover:brightness-90 active:brightness-110 uppercase tracking-wider;
 }
+
+.process {
+  @apply bg-[#33294A]/90 rounded-2xl p-10 m-4 shadow-xl border border-gray-600/30;
+}
+
 .error {
   @apply text-[#F34213];
 }
@@ -86,6 +92,8 @@ h3 {
   background-size: cover;
 }
 
-.process {
-  @apply bg-white/20 rounded-2xl border p-10 m-4;
+.bg-img {
+  background-image: url('/images/gallery/1.jpg');
+  background-position: center;
+  background-size: cover;
 }
