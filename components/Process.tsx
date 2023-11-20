@@ -12,7 +12,7 @@ function Process({}: Props) {
   return (
     <div className="relative bg-img z-0">
       <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/50 z-[2]" />
-      <div className="grid mx-auto max-w-7xl justify-center items-center">
+      <div className="grid mx-auto max-w-5xl justify-center items-center">
         <div className="w-full flex justify-center items-center z-10 bg-gradient-to-t from-black/5 to-black/90">
           <h1 className="text-center pt-20 underline underline-offset-8">
             our process
@@ -27,12 +27,12 @@ function Process({}: Props) {
                 vision, goals, and space.
               </p>
             </div>
-            <div className="process-wrap">
+            <div className="process-wrap-img-r">
               <Image src={img1} alt={'brand image'} className="process-img" />
             </div>
           </div>
           <div className="process">
-            <div className="process-wrap">
+            <div className="process-wrap-img-l">
               <Image src={img2} alt={'brand image'} className="process-img" />
             </div>
             <div className="process-wrap">
