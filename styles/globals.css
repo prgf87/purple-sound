@@ -57,7 +57,11 @@ h3 {
 }
 
 .process-wrap {
-  @apply m-auto py-10;
+  @apply m-auto;
+}
+
+.process-wrap-img-r {
+  @apply pr-4;
 }
 
 .process-img {
