@@ -17,18 +17,17 @@ export async function sendMail(
     },
   });
 
+  const ukDate = new Date(date).toLocaleDateString('en-GB');
+
   const mailOptions = {
     from: email,
     to: process.env.NODEMAILER_EMAIL,
     name: name,
     subject: subject,
-    text: `From: ${email} \n
-    ${message}`,
-    // 'From: ' + email + '\n' + message,
+    text: `From: ${name} \nEmail: ${email} \nCompany Name: ${companyName} \nLocation: ${location} \nDate: ${ukDate} \nSubject: ${subject} \nMessage: \n${message}`,
   };
 
   await new Promise((resolve, reject) => {
-    // send mail
     transporter.sendMail(mailOptions, (err, response) => {
       if (err) {
         reject(err);

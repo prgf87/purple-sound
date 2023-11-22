@@ -21,7 +21,7 @@ function Process({}: Props) {
         <section className="grid grid-cols-1 mx-auto py-4 z-10">
           <div className="process">
             <div className="process-wrap">
-              <h1 className="text-5xl text-right">consultation</h1>
+              <h1 className="text-3xl sm:text-5xl text-right">consultation</h1>
               <p className="process-p text-right">
                 We begin with a comprehensive consultation to understand your
                 vision, goals, and space.
@@ -36,7 +36,9 @@ function Process({}: Props) {
               <Image src={img2} alt={'brand image'} className="process-img" />
             </div>
             <div className="process-wrap">
-              <h1 className="text-5xl text-left">Design & Planning</h1>
+              <h1 className="text-3xl sm:text-5xl text-left">
+                Design & Planning
+              </h1>
               <p className="process-p text-left">
                 Our team crafts a detailed plan, incorporating the best
                 technology and techniques to achieve the desired sound
@@ -46,7 +48,7 @@ function Process({}: Props) {
           </div>
           <div className="process">
             <div className="process-wrap">
-              <h1 className="text-5xl text-right">collaboration</h1>
+              <h1 className="text-3xl sm:text-5xl text-right">collaboration</h1>
               <p className="process-p text-right">
                 We involve you throughout the process to ensure your vision is
                 realized.
@@ -61,7 +63,7 @@ function Process({}: Props) {
               <Image src={img4} alt={'brand image'} className="process-img" />
             </div>
             <div className="process-wrap">
-              <h1 className="text-5xl text-left">Installation</h1>
+              <h1 className="text-3xl sm:text-5xl text-left">Installation</h1>
               <p className="process-p text-left">
                 We execute the installation with precision, ensuring every
                 element is seamlessly integrated.
@@ -70,7 +72,9 @@ function Process({}: Props) {
           </div>
           <div className="process">
             <div className="process-wrap">
-              <h1 className="text-5xl text-right">Testing & Calibrating</h1>
+              <h1 className="text-3xl sm:text-5xl text-right">
+                Testing & Calibrating
+              </h1>
               <p className="process-p text-right">
                 Our experts meticulously calibrate the system for optimal
                 performance and user experience.
