@@ -16,7 +16,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/img1.png" />
       </Head>
-      <main className="overflow-x-hidden max-w-[100vw]">
+      <main className="overflow-x-hidden max-w-[100vw] scrollbar-thin scrollbar-corner-stone-800 scrollbar-track-gray-400/20 scrollbar-thumb-slate-100">
         <div className="fixed left-0 top-0 right-0 z-10">
           <Header />
         </div>
