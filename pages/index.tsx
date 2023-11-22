@@ -4,7 +4,6 @@ import Brands from '@/components/Brands';
 import Banners from '@/components/Banners';
 import Process from '@/components/Process';
 import Contact from '@/components/Contact';
-import ContactOLD from '@/components/ContactOLD';
 
 export default function Home() {
   return (
@@ -31,7 +30,6 @@ export default function Home() {
         <div id="reviews"></div>
         <div id="contact">
           <Contact />
-          <ContactOLD />
         </div>
       </main>
     </>

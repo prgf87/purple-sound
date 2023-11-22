@@ -66,11 +66,13 @@ export default function Contact() {
       <div className="sm:space-y-4 flex flex-col mt-10">
         <div className="space-y-2">
           <h1 className="text-7xl text-center">Contact Us</h1>
-          <p>
-            We would love to hear from you. Please fill out the form below and
-            we&apos;ll get back to you as soon as possible.
-          </p>
-          <p>Fields marked with an asterix must be filled in</p>
+          <div className="text-sm">
+            <p>
+              We would love to hear from you. Please fill out the form below and
+              we&apos;ll get back to you as soon as possible.
+            </p>
+            <p>Fields marked with an asterix must be filled in</p>
+          </div>
         </div>
 
         <form
@@ -88,6 +90,7 @@ export default function Contact() {
                 setName(e.target.value);
               }}
             />
+
             <input
               placeholder="Email*"
               value={email}
