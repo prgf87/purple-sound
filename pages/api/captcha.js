@@ -1,11 +1,10 @@
 export default async function handler(req, res) {
-  const secret = process.env.RECAPTCHA_SECRET;
   const { token } = req.body;
   const response = await fetch(
     'https://www.google.com/recaptcha/api/siteverify',
     {
       method: 'POST',
-      secret: secret,
+      secret: process.env.RECAPTCHA_SECRET,
       response: token,
       headers: {
         'Content-Type': 'application/json',
