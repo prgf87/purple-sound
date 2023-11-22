@@ -5,16 +5,16 @@ import { useReCaptcha } from 'next-recaptcha-v3';
 import LoadingSpinner from './LoadingSpinner';
 
 export default function Contact() {
-  // const [captcha, setCaptcha] = useState<string>('');
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [companyName, setCompanyName] = useState('');
-  const [location, setLocation] = useState('');
-  const [date, setDate] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [sentEmail, setSentEmail] = useState(false);
+  const [captcha, setCaptcha] = useState<Boolean>(false);
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [companyName, setCompanyName] = useState<string>('');
+  const [location, setLocation] = useState<string>('');
+  const [date, setDate] = useState<string>('');
+  const [subject, setSubject] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const [loading, setLoading] = useState<Boolean>(false);
+  const [sentEmail, setSentEmail] = useState<Boolean>(false);
 
   const { executeRecaptcha } = useReCaptcha();
 
@@ -22,62 +22,73 @@ export default function Contact() {
     e.preventDefault();
     setLoading(true);
     const token = await executeRecaptcha('form_submit');
-    console.log(
-      'Form Data: --->',
-      token,
-      name,
-      email,
-      companyName,
-      location,
-      date,
-      subject,
-      message
-    );
+    // console.log(
+    //   'Form Data: --->',
+    //   token,
+    //   name,
+    //   email,
+    //   companyName,
+    //   location,
+    //   date,
+    //   subject,
+    //   message
+    // );
 
     try {
-      const response = await fetch('/api/captcha', {
+      const res = await fetch('/api/captcha', {
         method: 'POST',
         headers: {
           Accept: 'application/json, text/plain, */*',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          formData: {
-            name: name,
-            email: email,
-            companyName: companyName ? companyName : 'No company provided',
-            location: location,
-            date: date,
-            subject: subject,
-            message: message,
-          },
-          token,
-        }),
+        body: JSON.stringify({ token: token }),
       });
-
-      if (response.status === 200) {
-        console.log(response);
-        alert('Message sent, thanks for getting in touch.');
-        // setSentEmail(true);
-        // setName('');
-        // setEmail('');
-        // setSubject('');
-        // setMessage('');
-        // setCompanyName('');
-        // setDate('');
-        // setLocation('');
-      } else {
-        const errorResponse = await response.json();
-        alert(
-          errorResponse.message || 'Something went wrong, please try again.'
-        );
-      }
+      console.log('res#####: ', res);
     } catch (err) {
       console.error(err);
-      alert('Sorry, something went wrong, please try again.');
-    } finally {
       setLoading(false);
     }
+    // try {
+    //   const response = await fetch('/api/mail', {
+    //     method: 'POST',
+    //     headers: {
+    //       Accept: 'application/json, text/plain, */*',
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //       name: name,
+    //       email: email,
+    //       companyName: companyName ? companyName : 'No company provided',
+    //       location: location,
+    //       date: date,
+    //       subject: subject,
+    //       message: message,
+    //     }),
+    //   });
+
+    //   if (response.status === 200) {
+    //     console.log(response);
+    //     alert('Message sent, thanks for getting in touch.');
+    //     // setSentEmail(true);
+    //     // setName('');
+    //     // setEmail('');
+    //     // setSubject('');
+    //     // setMessage('');
+    //     // setCompanyName('');
+    //     // setDate('');
+    //     // setLocation('');
+    //   } else {
+    //     const errorResponse = await response.json();
+    //     alert(
+    //       errorResponse.message || 'Something went wrong, please try again.'
+    //     );
+    //   }
+    // } catch (err) {
+    //   console.error(err);
+    //   alert('Sorry, something went wrong, please try again.');
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   return (
@@ -177,20 +188,6 @@ export default function Contact() {
               {loading ? <LoadingSpinner /> : 'Submit'}
             </button>
           )}
-          {/* <ReCAPTCHA
-            sitekey={reCaptchaKey}
-            onChange={(e) => {
-              fetch('/api/captcha', {
-                method: 'POST',
-                body: e,
-              }).then(({ ok }) => {
-                if (ok === true) setCaptcha(true);
-                else alert('Recaptcha failed, please try again');
-              });
-
-            }}
-            className="flex justify-center items-center sm:mt-0"
-          /> */}
         </form>
       </div>
     </div>

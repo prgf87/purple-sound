@@ -2,7 +2,7 @@ import { sendMail } from '../../utils/mailer';
 
 const handler = async (req, res) => {
   const { name, subject, email, message, companyName, location, date } =
-    req.body.data;
+    req.body;
 
   try {
     const { method } = req;
