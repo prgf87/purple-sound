@@ -63,6 +63,10 @@ h3 {
   @apply text-xs hover:brightness-90 active:brightness-110 uppercase tracking-wider;
 }
 
+.nav-link {
+  @apply text-3xl hover:brightness-90 active:brightness-110 uppercase tracking-wider;
+}
+
 .process {
   @apply bg-[#33294A]/90 rounded-2xl min-h-[350px] p-4 sm:p-10 m-4 shadow-xl border border-gray-600/30 grid grid-cols-2 gap-x-8;
 }
