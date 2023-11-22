@@ -13,7 +13,7 @@ function Hero({}: Props) {
         playsInline
         autoPlay
         loop
-        className="object-cover h-[100vh] scale-125"
+        className="object-cover h-[100vh] scale-125 overflow-hidden"
       >
         <source src="/video/bgvideo-comp.mp4" type="video/mp4" />
       </video>
@@ -23,15 +23,14 @@ function Hero({}: Props) {
 
         <h2 className="text-xs pt-1 uppercase z-[2]">Company</h2>
       </div>
-      <div className="absolute w-full bottom-0 flex justify-center z-[2]">
-        <ContactButton />
-        <Link
-          href={'/#services'}
-          className="absolute bottom-4 animate-bounce animate-ping text-white"
-        >
-          <SlArrowDown />
-        </Link>
-      </div>
+
+      <ContactButton />
+      <Link
+        href={'/#services'}
+        className="absolute bottom-4 animate-bounce animate-ping text-white"
+      >
+        <SlArrowDown />
+      </Link>
     </div>
   );
 }
