@@ -9,7 +9,7 @@ function Banner({ customBg, heading, message }: Props) {
       className={`${customBg} h-[60vh] z-0 flex justify-center items-center`}
     >
       <div className="w-full bg-[#33294A] opacity-30 z-0 h-full " />
-      <div className="absolute z-10 grid mx-auto max-w-5xl">
+      <div className="absolute z-[1] grid mx-auto max-w-5xl">
         <h1 className="text-white text-7xl text-center drop-shadow-2xl pb-10">
           {heading}
         </h1>

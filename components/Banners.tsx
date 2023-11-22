@@ -7,7 +7,7 @@ type Props = {};
 function Banners({}: Props) {
   const { banners } = data.intro;
   return (
-    <>
+    <div className="z-0">
       {banners.map((ban, i) => {
         return (
           <Banner
@@ -18,7 +18,7 @@ function Banners({}: Props) {
           />
         );
       })}
-    </>
+    </div>
   );
 }
 
