@@ -62,7 +62,7 @@ function Header({}: Props) {
             <Link href={'/#services'}>Services </Link>
           </li>
           <li className="header-link">
-            <Link href={'/#testimonials'}>Testimonials </Link>
+            <Link href={'/#process'}>Our Process </Link>
           </li>
           <li className="header-link">
             <Link href={'/#contact'}>Contact </Link>
