@@ -1,13 +1,11 @@
 'use client';
-import React, { FormEventHandler } from 'react';
+import React from 'react';
 import { useState } from 'react';
-// import ReCAPTCHA from 'react-google-recaptcha';
+import { useReCaptcha } from 'next-recaptcha-v3';
 import LoadingSpinner from './LoadingSpinner';
 
-const reCaptchaKey = process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY;
-
 export default function Contact() {
-  const [captcha, setCaptcha] = useState(null);
+  // const [captcha, setCaptcha] = useState<string>('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [companyName, setCompanyName] = useState('');
@@ -18,33 +16,56 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [sentEmail, setSentEmail] = useState(false);
 
+  const { executeRecaptcha } = useReCaptcha();
+
   const submitHandler = async (e: any) => {
     e.preventDefault();
     setLoading(true);
+    const token = await executeRecaptcha('form_submit');
+    console.log(
+      'Form Data: --->',
+      token,
+      name,
+      email,
+      companyName,
+      location,
+      date,
+      subject,
+      message
+    );
 
     try {
-      const response = await fetch('/api/mail', {
+      const response = await fetch('/api/captcha', {
         method: 'POST',
         headers: {
           Accept: 'application/json, text/plain, */*',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: name,
-          email: email,
-          subject: subject,
-          message: message,
+          formData: {
+            name: name,
+            email: email,
+            companyName: companyName ? companyName : 'No company provided',
+            location: location,
+            date: date,
+            subject: subject,
+            message: message,
+          },
+          token,
         }),
       });
 
       if (response.status === 200) {
         console.log(response);
-        setSentEmail(true);
         alert('Message sent, thanks for getting in touch.');
-        setName('');
-        setEmail('');
-        setSubject('');
-        setMessage('');
+        // setSentEmail(true);
+        // setName('');
+        // setEmail('');
+        // setSubject('');
+        // setMessage('');
+        // setCompanyName('');
+        // setDate('');
+        // setLocation('');
       } else {
         const errorResponse = await response.json();
         alert(
@@ -59,10 +80,8 @@ export default function Contact() {
     }
   };
 
-  console.log(date);
-
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center pb-10">
       <div className="sm:space-y-4 flex flex-col mt-10">
         <div className="space-y-2">
           <h1 className="text-7xl text-center">Contact Us</h1>
@@ -85,7 +104,7 @@ export default function Contact() {
               value={name}
               className="contact-input"
               type="text"
-              required
+              // required
               onChange={(e) => {
                 setName(e.target.value);
               }}
@@ -96,7 +115,7 @@ export default function Contact() {
               value={email}
               className="contact-input"
               type="email"
-              required
+              // required
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
@@ -108,7 +127,6 @@ export default function Contact() {
               value={companyName}
               className="contact-input"
               type="text"
-              required
               onChange={(e) => {
                 setCompanyName(e.target.value);
               }}
@@ -119,7 +137,7 @@ export default function Contact() {
               value={location}
               className="contact-input"
               type="text"
-              required
+              // required
               onChange={(e) => {
                 setLocation(e.target.value);
               }}
@@ -130,30 +148,31 @@ export default function Contact() {
             value={date}
             className="contact-input2"
             type="date"
-            required
+            // required
             onChange={(e) => setDate(e.target.value)}
           />
           <input
-            placeholder="Subject"
+            placeholder="Subject*"
             value={subject}
             className="contact-input2"
             type="text"
-            required
+            // required
             onChange={(e) => setSubject(e.target.value)}
           />
           <textarea
-            placeholder="Message"
+            placeholder="Message*"
             value={message}
             className="contact-input2"
-            required
+            // required
             onChange={(e) => setMessage(e.target.value)}
           />
           {sentEmail ? (
             <p className="btn4-dis text-center">Message sent</p>
           ) : (
             <button
-              className={!captcha ? `btn4-dis` : `btn4`}
-              disabled={!captcha || sentEmail ? true : false}
+              className={`btn4`}
+              // disabled={sentEmail}
+              type="submit"
             >
               {loading ? <LoadingSpinner /> : 'Submit'}
             </button>
