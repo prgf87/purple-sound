@@ -35,6 +35,17 @@ h3 {
   @apply border-2 border-black/10 px-8 py-2 rounded-2xl bg-[#33294A]/10 text-white uppercase font-semibold hover:brightness-110 hover:border-black/30 active:border-black/50 transition-all duration-100 text-xs;
 }
 
+.btn3 {
+  @apply px-3 sm:px-6 py-2 border border-slate-800 rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-slate-500/70 hover:text-slate-100/80;
+}
+
+.btn4 {
+  @apply px-10 py-5 border bg-slate-400/70 border-slate-600 rounded-md uppercase tracking-widest text-gray-300 transition-all hover:border-slate-300/70 hover:text-slate-400/80 text-lg font-bold;
+}
+.btn4-dis {
+  @apply px-10 py-5 border bg-slate-400/30 border-slate-600 rounded-md uppercase tracking-widest text-gray-100/30 transition-all text-lg font-bold;
+}
+
 .intro-boxes-img,
 .intro-boxes-p {
   @apply border border-spacing-1 border-slate-300/70 bg-slate-900/20 p-4 rounded-3xl shadow-lg m-5;
@@ -78,6 +89,13 @@ h3 {
 
 .input-field {
   @apply w-[100vw] p-2 m-20;
+}
+
+.contact-input {
+  @apply outline-none w-full bg-slate-100/30 rounded-sm border-b px-6 py-4 border-gray-800 transition-all placeholder:text-gray-500 focus:border-gray-300/60;
+}
+.contact-input2 {
+  @apply outline-none w-full bg-slate-100/30 rounded-sm border-b px-6 py-4 border-gray-800 transition-all placeholder:text-gray-500 focus:border-gray-300/60;
 }
 
 .custom-img {
