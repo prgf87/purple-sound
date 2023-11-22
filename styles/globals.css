@@ -92,10 +92,10 @@ h3 {
 }
 
 .contact-input {
-  @apply outline-none w-full bg-slate-100/30 rounded-sm border-b px-6 py-4 border-gray-800 transition-all placeholder:text-gray-500 focus:border-gray-300/60;
+  @apply outline-none w-full bg-slate-100/90 rounded-sm border-b px-6 py-4 border-gray-400 transition-all text-gray-800 focus:border-gray-300/60;
 }
 .contact-input2 {
-  @apply outline-none w-full bg-slate-100/30 rounded-sm border-b px-6 py-4 border-gray-800 transition-all placeholder:text-gray-500 focus:border-gray-300/60;
+  @apply outline-none w-full bg-slate-100/90 rounded-sm border-b px-6 py-4 border-gray-400 transition-all text-gray-800 focus:border-gray-300/60;
 }
 
 .custom-img {
