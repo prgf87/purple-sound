@@ -10,7 +10,7 @@ function Brand({ link, image, name }: Props) {
       <Image
         src={image}
         alt={name}
-        width={160}
+        width={180}
         height={50}
         className="object-contain h-24"
         style={{ color: 'white' }}
