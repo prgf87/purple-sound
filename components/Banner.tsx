@@ -13,10 +13,10 @@ function Banner({ customBg, heading, message }: Props) {
         <h1 className="text-white text-7xl text-center drop-shadow-2xl pb-10">
           {heading}
         </h1>
-        <div className="uppercase sm:px-28">
-          <h2 className="text-white text-3xl text-center tracking-tighter">
+        <div className="px-4 sm:px-28">
+          <p className="text-white font-bold text-3xl text-center tracking-tighter">
             {message}
-          </h2>
+          </p>
         </div>
       </div>
     </div>

@@ -3,9 +3,10 @@ import React from 'react';
 type Props = { open: Boolean; setOpen: any };
 
 function Modal({ open, setOpen }: Props) {
+  // open === true;
   return (
     <div
-      className="border text-card-foreground w-full max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden"
+      className="border text-card-foreground w-full max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden z-50"
       data-v0-t="card"
     >
       <div className="flex justify-center mt-8">

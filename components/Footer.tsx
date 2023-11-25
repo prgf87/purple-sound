@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import React from 'react';
 
-type Props = {};
+type Props = { nav: Boolean; setNav: any };
 
-function Footer({}: Props) {
+function Footer({ nav, setNav }: Props) {
   return (
-    <div className="py-20 border-t-2 flex justify-center items-center text-center">
+    <div className="py-20 border-t-2 flex justify-center items-center text-center bg-black/90">
       <div className="grid mx-auto">
-        <Link href={'/#hero'}>
-          <h1 className="text-7xl hover:text-slate-400">
+        <Link href={'/#hero'} onClick={() => setNav(!nav)}>
+          <h1 className="text-5xl sm:text-7xl hover:text-slate-400">
             Purple Sound Company
           </h1>
         </Link>
