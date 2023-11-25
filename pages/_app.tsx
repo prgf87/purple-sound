@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ReCaptchaProvider useEnterprise>
+    <ReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTHA_SITE_KEY}>
       <Layout>
         <Component {...pageProps} />
       </Layout>

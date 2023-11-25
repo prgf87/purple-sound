@@ -27,73 +27,72 @@ export default function Contact() {
     // setLoading(true);
     // setOpen(!open);
     const token = await executeRecaptcha('form_submit');
-    console.log(token);
-    try {
-      const res = await fetch('/api/captcha', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json, text/plain, */*',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ token: token }),
-      });
-      console.log('res#####: ', res);
-      if (res.ok === true) {
-        setCaptcha(true);
-      }
-    } catch (err) {
-      console.error(err);
-      setLoading(false);
-    }
-
-    if (captcha === true) {
+    if (token) {
       try {
-        const response = await fetch('/api/mail', {
+        const res = await fetch('/api/captcha', {
           method: 'POST',
-          headers: {
-            Accept: 'application/json, text/plain, */*',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name: name,
-            email: email,
-            companyName: companyName ? companyName : 'No company provided',
-            location: location,
-            date: date,
-            subject: subject,
-            message: message,
-          }),
+          body: token,
         });
-
-        console.log('mailer response: ', response);
-        // if (response.status === 200) {
-        //   // alert('Message sent, thanks for getting in touch.');
-        //   // setSentEmail(true);
-        //   // setOpen(!open);
-        //   // setName('');
-        //   // setEmail('');
-        //   // setSubject('');
-        //   // setMessage('');
-        //   // setCompanyName('');
-        //   // setDate('');
-        //   // setLocation('');
-        // } else {
-        //   const errorResponse = await response.json();
-        //   alert(
-        //     errorResponse.message || 'Something went wrong, please try again.'
-        //   );
-        //   return;
-        // }
+        // console.log('res#####: ', res);
+        const parsedRes = await res.json();
+        console.log('###############ParsedRes: \n', parsedRes);
+        if (res.ok === true) {
+          setCaptcha(true);
+        }
       } catch (err) {
         console.error(err);
-        alert('Sorry, something went wrong, please try again.');
-      } finally {
         setLoading(false);
-        return;
       }
-    } else {
-      return;
     }
+
+    // if (captcha === true) {
+    //   try {
+    //     const response = await fetch('/api/mail', {
+    //       method: 'POST',
+    //       headers: {
+    //         Accept: 'application/json, text/plain, */*',
+    //         'Content-Type': 'application/json',
+    //       },
+    //       body: JSON.stringify({
+    //         name: name,
+    //         email: email,
+    //         companyName: companyName ? companyName : 'No company provided',
+    //         location: location,
+    //         date: date,
+    //         subject: subject,
+    //         message: message,
+    //       }),
+    //     });
+
+    //     console.log('mailer response: ', response);
+    //     // if (response.status === 200) {
+    //     //   // alert('Message sent, thanks for getting in touch.');
+    //     //   // setSentEmail(true);
+    //     //   // setOpen(!open);
+    //     //   // setName('');
+    //     //   // setEmail('');
+    //     //   // setSubject('');
+    //     //   // setMessage('');
+    //     //   // setCompanyName('');
+    //     //   // setDate('');
+    //     //   // setLocation('');
+    //     // } else {
+    //     //   const errorResponse = await response.json();
+    //     //   alert(
+    //     //     errorResponse.message || 'Something went wrong, please try again.'
+    //     //   );
+    //     //   return;
+    //     // }
+    //   } catch (err) {
+    //     console.error(err);
+    //     alert('Sorry, something went wrong, please try again.');
+    //   } finally {
+    //     setLoading(false);
+    //     return;
+    //   }
+    // } else {
+    //   return;
+    // }
   };
 
   return (
