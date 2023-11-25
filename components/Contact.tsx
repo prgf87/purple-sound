@@ -27,11 +27,16 @@ export default function Contact() {
     // setLoading(true);
     // setOpen(!open);
     const token = await executeRecaptcha('form_submit');
-    if (token) {
+    console.log(token, 'TOKEN############');
+    if (token.length > 0) {
       try {
         const res = await fetch('/api/captcha', {
           method: 'POST',
-          body: token,
+          headers: {
+            Accept: 'application/json, text/plain, */*',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ token: token }),
         });
         // console.log('res#####: ', res);
         const parsedRes = await res.json();
