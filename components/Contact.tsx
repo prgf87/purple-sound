@@ -17,17 +17,16 @@ export default function Contact() {
   const [message, setMessage] = useState<string>('');
   const [loading, setLoading] = useState<Boolean>(false);
   const [sentEmail, setSentEmail] = useState<Boolean>(false);
-  // const [error, setError] = useState<string>('');
-  // const [success, setSuccess] = useState<string>('');
+  const [error, setError] = useState<Boolean>(false);
+  const [success, setSuccess] = useState<Boolean>(false);
 
   const { executeRecaptcha } = useReCaptcha();
 
   const submitHandler = async (e: any) => {
     e.preventDefault();
-    // setLoading(true);
+    setLoading(true);
     // setOpen(!open);
     const token = await executeRecaptcha('form_submit');
-    console.log(token, 'TOKEN############');
     if (token.length > 0) {
       try {
         const res = await fetch('/api/captcha', {
@@ -38,11 +37,13 @@ export default function Contact() {
           },
           body: JSON.stringify({ token: token }),
         });
-        // console.log('res#####: ', res);
         const parsedRes = await res.json();
         console.log('###############ParsedRes: \n', parsedRes);
-        if (res.ok === true) {
+        if (parsedRes.message === 'Success') {
           setCaptcha(true);
+        } else {
+          setLoading(false);
+          return;
         }
       } catch (err) {
         console.error(err);
@@ -50,54 +51,60 @@ export default function Contact() {
       }
     }
 
-    // if (captcha === true) {
-    //   try {
-    //     const response = await fetch('/api/mail', {
-    //       method: 'POST',
-    //       headers: {
-    //         Accept: 'application/json, text/plain, */*',
-    //         'Content-Type': 'application/json',
-    //       },
-    //       body: JSON.stringify({
-    //         name: name,
-    //         email: email,
-    //         companyName: companyName ? companyName : 'No company provided',
-    //         location: location,
-    //         date: date,
-    //         subject: subject,
-    //         message: message,
-    //       }),
-    //     });
+    try {
+      if (captcha === true) {
+        const response = await fetch('/api/mail', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json, text/plain, */*',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            companyName: companyName ? companyName : 'No company provided',
+            location: location,
+            date: date,
+            subject: subject,
+            message: message,
+          }),
+        });
 
-    //     console.log('mailer response: ', response);
-    //     // if (response.status === 200) {
-    //     //   // alert('Message sent, thanks for getting in touch.');
-    //     //   // setSentEmail(true);
-    //     //   // setOpen(!open);
-    //     //   // setName('');
-    //     //   // setEmail('');
-    //     //   // setSubject('');
-    //     //   // setMessage('');
-    //     //   // setCompanyName('');
-    //     //   // setDate('');
-    //     //   // setLocation('');
-    //     // } else {
-    //     //   const errorResponse = await response.json();
-    //     //   alert(
-    //     //     errorResponse.message || 'Something went wrong, please try again.'
-    //     //   );
-    //     //   return;
-    //     // }
-    //   } catch (err) {
-    //     console.error(err);
-    //     alert('Sorry, something went wrong, please try again.');
-    //   } finally {
-    //     setLoading(false);
-    //     return;
-    //   }
-    // } else {
-    //   return;
-    // }
+        const parsedRes = await response.json();
+
+        if (parsedRes.message !== 'Success') {
+          setOpen(!open);
+          setError(!error);
+        }
+        // if (response.status === 200) {
+        //   // alert('Message sent, thanks for getting in touch.');
+        //   // setSentEmail(true);
+        //   // setOpen(!open);
+        //   // setName('');
+        //   // setEmail('');
+        //   // setSubject('');
+        //   // setMessage('');
+        //   // setCompanyName('');
+        //   // setDate('');
+        //   // setLocation('');
+        // } else {
+        //   const errorResponse = await response.json();
+        //   alert(
+        //     errorResponse.message || 'Something went wrong, please try again.'
+        //   );
+        //   return;
+        // }
+      } else {
+        console.log('######Success!!#######');
+        return;
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Sorry, something went wrong, please try again.');
+    } finally {
+      setLoading(false);
+      return;
+    }
   };
 
   return (
@@ -116,7 +123,12 @@ export default function Contact() {
         {open ? (
           <div className="absolute left-0 right-0">
             <div className="relative top-32">
-              <Modal open={open} setOpen={setOpen} />
+              <Modal
+                open={open}
+                setOpen={setOpen}
+                error={error}
+                setError={setError}
+              />
             </div>
           </div>
         ) : null}

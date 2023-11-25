@@ -1,8 +1,13 @@
+import { send } from 'process';
 import { sendMail } from '../../utils/mailer';
 
 const handler = async (req, res) => {
   const { name, subject, email, message, companyName, location, date } =
     req.body;
+
+  if (!name || !subject || !email || !message || !location || !date) {
+    return res.status(400).send({ message: 'Information missing' });
+  }
 
   try {
     const { method } = req;
