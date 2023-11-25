@@ -100,9 +100,9 @@ function Header({}: Props) {
         // }`}
         className={`absolute top-0 right-0 bg-black ${
           nav
-            ? 'overscroll-none fixed right-0 opacity-100 h-screen w-screen'
-            : 'right-[-105%] h-10 w-10 '
-        } transition-all ease-in-out duration-500 opacity-0`}
+            ? 'overscroll-none fixed right-0 opacity-100 h-screen w-screen ease-out'
+            : 'fixed right-[-105%] top-0 w-10 opacity-50'
+        } transition-all ease-out duration-500`}
       >
         <div className="text-white flex justify-center items-stretch mt-80 text-center">
           <div className="absolute top-20">
@@ -143,8 +143,8 @@ function Header({}: Props) {
             </li>
           </ul>
         </div>
-        <div className="mt-[40vh]">
-          <Footer />
+        <div className="mt-[20vh] sm:mt[30vh]">
+          <Footer nav={nav} setNav={setNav} />
         </div>
       </div>
     </div>

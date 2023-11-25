@@ -17,14 +17,17 @@ export default function Contact() {
   const [message, setMessage] = useState<string>('');
   const [loading, setLoading] = useState<Boolean>(false);
   const [sentEmail, setSentEmail] = useState<Boolean>(false);
+  // const [error, setError] = useState<string>('');
+  // const [success, setSuccess] = useState<string>('');
 
   const { executeRecaptcha } = useReCaptcha();
 
   const submitHandler = async (e: any) => {
     e.preventDefault();
-    setLoading(true);
+    // setLoading(true);
+    // setOpen(!open);
     const token = await executeRecaptcha('form_submit');
-
+    console.log(token);
     try {
       const res = await fetch('/api/captcha', {
         method: 'POST',
@@ -63,23 +66,24 @@ export default function Contact() {
         });
 
         console.log('mailer response: ', response);
-        if (response.status === 200) {
-          // alert('Message sent, thanks for getting in touch.');
-          setSentEmail(true);
-          setName('');
-          setEmail('');
-          setSubject('');
-          setMessage('');
-          setCompanyName('');
-          setDate('');
-          setLocation('');
-        } else {
-          const errorResponse = await response.json();
-          alert(
-            errorResponse.message || 'Something went wrong, please try again.'
-          );
-          return;
-        }
+        // if (response.status === 200) {
+        //   // alert('Message sent, thanks for getting in touch.');
+        //   // setSentEmail(true);
+        //   // setOpen(!open);
+        //   // setName('');
+        //   // setEmail('');
+        //   // setSubject('');
+        //   // setMessage('');
+        //   // setCompanyName('');
+        //   // setDate('');
+        //   // setLocation('');
+        // } else {
+        //   const errorResponse = await response.json();
+        //   alert(
+        //     errorResponse.message || 'Something went wrong, please try again.'
+        //   );
+        //   return;
+        // }
       } catch (err) {
         console.error(err);
         alert('Sorry, something went wrong, please try again.');
@@ -105,7 +109,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {sentEmail ? (
+        {open ? (
           <div className="absolute left-0 right-0">
             <div className="relative top-32">
               <Modal open={open} setOpen={setOpen} />
