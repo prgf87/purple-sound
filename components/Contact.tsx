@@ -17,7 +17,6 @@ export default function Contact() {
   const [message, setMessage] = useState<string>('');
   const [loading, setLoading] = useState<Boolean>(false);
   const [sentEmail, setSentEmail] = useState<Boolean>(false);
-  const [error, setError] = useState<Boolean>(false);
   const [success, setSuccess] = useState<Boolean>(false);
 
   const { executeRecaptcha } = useReCaptcha();
@@ -25,7 +24,6 @@ export default function Contact() {
   const submitHandler = async (e: any) => {
     e.preventDefault();
     setLoading(true);
-    // setOpen(!open);
     const token = await executeRecaptcha('form_submit');
     if (token.length > 0) {
       try {
@@ -74,19 +72,10 @@ export default function Contact() {
 
         if (parsedRes.message !== 'Success') {
           setOpen(!open);
-          setError(!error);
         }
         // if (response.status === 200) {
-        //   // alert('Message sent, thanks for getting in touch.');
-        //   // setSentEmail(true);
-        //   // setOpen(!open);
-        //   // setName('');
-        //   // setEmail('');
-        //   // setSubject('');
-        //   // setMessage('');
-        //   // setCompanyName('');
-        //   // setDate('');
-        //   // setLocation('');
+        // alert('Message sent, thanks for getting in touch.');
+
         // } else {
         //   const errorResponse = await response.json();
         //   alert(
@@ -96,6 +85,16 @@ export default function Contact() {
         // }
       } else {
         console.log('######Success!!#######');
+        setSuccess(!success);
+        setSentEmail(!sentEmail);
+        setOpen(!open);
+        setName('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+        setCompanyName('');
+        setDate('');
+        setLocation('');
         return;
       }
     } catch (err) {
@@ -123,12 +122,7 @@ export default function Contact() {
         {open ? (
           <div className="absolute left-0 right-0">
             <div className="relative top-32">
-              <Modal
-                open={open}
-                setOpen={setOpen}
-                error={error}
-                setError={setError}
-              />
+              <Modal open={open} setOpen={setOpen} success={success} />
             </div>
           </div>
         ) : null}
@@ -143,7 +137,7 @@ export default function Contact() {
               value={name}
               className="contact-input"
               type="text"
-              // required
+              required
               onChange={(e) => {
                 setName(e.target.value);
               }}
@@ -154,7 +148,7 @@ export default function Contact() {
               value={email}
               className="contact-input"
               type="email"
-              // required
+              required
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
@@ -176,7 +170,7 @@ export default function Contact() {
               value={location}
               className="contact-input"
               type="text"
-              // required
+              required
               onChange={(e) => {
                 setLocation(e.target.value);
               }}
@@ -187,7 +181,7 @@ export default function Contact() {
             value={date}
             className="contact-input"
             type="date"
-            // required
+            required
             onChange={(e) => setDate(e.target.value)}
           />
           <input
@@ -195,22 +189,34 @@ export default function Contact() {
             value={subject}
             className="contact-input"
             type="text"
-            // required
+            required
             onChange={(e) => setSubject(e.target.value)}
           />
           <textarea
             placeholder="Message*"
             value={message}
             className="contact-input"
-            // required
+            required
             onChange={(e) => setMessage(e.target.value)}
           />
           {sentEmail ? (
             <p className="btn4-dis text-center">Message sent</p>
           ) : (
             <button
-              className={`btn4`}
-              // disabled={sentEmail}
+              className={
+                !name || !email || !subject || !location || !date || !message
+                  ? `btn4-dis`
+                  : `btn4`
+              }
+              disabled={
+                sentEmail ||
+                !name ||
+                !email ||
+                !subject ||
+                !location ||
+                !date ||
+                !message
+              }
               type="submit"
             >
               {loading ? <LoadingSpinner /> : 'Submit'}
