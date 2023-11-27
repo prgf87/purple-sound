@@ -37,11 +37,7 @@
         "link": "https://martin-audio.com/",
         "image": "PurpleSoundCo/Images/brands/ma-white_hvyfhp"
       },
-      {
-        "name": "Pioneer",
-        "link": "https://www.pioneer.eu/",
-        "image": "PurpleSoundCo/Images/brands/pioneer-white_pszfxn"
-      },
+
       {
         "name": "Allen&Heath",
         "link": "https://www.allen-heath.com/",
@@ -56,11 +52,6 @@
         "name": "Matrix",
         "link": "https://www.matrix-digi.com/",
         "image": "PurpleSoundCo/Images/brands/matrix-white_diaqsq"
-      },
-      {
-        "name": "Midas",
-        "link": "https://www.midasconsoles.com/",
-        "image": "PurpleSoundCo/Images/brands/midas-white_gkf8ey"
       }
     ],
     "process": [{ "bg-image": "PurpleSoundCo/Images/gallery/1_ifpslv" }]
