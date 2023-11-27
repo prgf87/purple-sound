@@ -3,15 +3,10 @@ import React from 'react';
 type Props = {
   open: Boolean;
   setOpen: any;
-  error: Boolean;
-  setError: any;
   success: Boolean;
-  setSuccess: any;
 };
 
-function Modal({ open, setOpen, error, setError, success, setSuccess }: Props) {
-  // open === true;
-
+function Modal({ open, setOpen, success }: Props) {
   if (success === true) {
     return (
       <div
@@ -38,8 +33,8 @@ function Modal({ open, setOpen, error, setError, success, setSuccess }: Props) {
         <div className="px-8 py-4">
           <h1 className="text-5xl">Email Sent Successfully</h1>
           <p className="mt-2 text-zinc-500 dark:text-zinc-400">
-            Your email has been successfully delivered. We will get back to you
-            soon.
+            Your email has been successfully delivered. We will get back to your
+            enquiry as soon as we can.
           </p>
         </div>
         <div className="px-8 py-4 flex justify-end">
@@ -66,9 +61,9 @@ function Modal({ open, setOpen, error, setError, success, setSuccess }: Props) {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="h-16 w-16 text-red-500"
           >
             <circle cx="12" cy="12" r="10"></circle>
@@ -79,8 +74,8 @@ function Modal({ open, setOpen, error, setError, success, setSuccess }: Props) {
         <div className="px-8 py-4">
           <h1 className="text-5xl">Something went wrong..</h1>
           <p className="mt-2 text-zinc-500 dark:text-zinc-400">
-            Something went wrong, please try to submit another message.
-            Alternatively, you can contact us directly on{' '}
+            Something went wrong, please try again. Alternatively, you can
+            contact us directly on{' '}
             <a
               href="mailto:info@purplesoundco.com"
               className="underline text-blue-400 hover:text-blue-600"
