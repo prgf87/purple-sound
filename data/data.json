@@ -4,22 +4,26 @@
       {
         "heading": "High-Fidelity Audio Systems",
         "message": "Immerse yourself in a world of unparalleled sound quality with our range of high-fidelity audio systems, designed to reproduce music and audio content with utmost precision.",
-        "customBg": "custom-img4"
+        "customBg": "custom-img4",
+        "image": "PurpleSoundCo/Images/gallery/11_fstl6a.jpg"
       },
       {
         "heading": "Experience Professional Audio",
         "message": "From recording studios to live events, our professional-grade equipment ensures that every note and sound is captured with unparalleled clarity.",
-        "customBg": "custom-img2"
+        "customBg": "custom-img2",
+        "image": "PurpleSoundCo/Images/gallery/8_ihfdbw.jpg"
       },
       {
         "heading": "Discover Audio Excellence",
         "message": "Whether you're seeking state-of-the-art sound systems, acoustical consulting, or bespoke solutions, we invite you to embark on a journey of sonic perfection with us.",
-        "customBg": "custom-img"
+        "customBg": "custom-img",
+        "image": "PurpleSoundCo/Images/gallery/7_wpiotf.jpg"
       },
       {
         "heading": "Innovative Acoustic Solutions",
         "message": "Elevate your space with our cutting-edge acoustic treatments, meticulously engineered to enhance sound quality and eliminate unwanted noise.",
-        "customBg": "custom-img3"
+        "customBg": "custom-img3",
+        "image": "PurpleSoundCo/Images/gallery/9_fq7617.jpg"
       }
     ],
     "brands": [
@@ -59,6 +63,6 @@
         "image": "/images/brands/midas-white.jpg"
       }
     ],
-    "process": []
+    "process": [{ "bg-image": "PurpleSoundCo/Images/gallery/1_ifpslv.jpg" }]
   }
 }
