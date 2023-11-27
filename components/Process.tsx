@@ -35,7 +35,7 @@ function Process({}: Props) {
                 <CldImage
                   width={1920}
                   height={1080}
-                  src={'PurpleSoundCo/Images/gallery/19_aoz6xv.jpg'}
+                  src={'PurpleSoundCo/Images/gallery/19_aoz6xv'}
                   alt={
                     'Photo of a laptop on a wooden desk with some people gesturing at it'
                   }
@@ -47,7 +47,7 @@ function Process({}: Props) {
             <div className="process">
               <div className="process-wrap">
                 <CldImage
-                  src={'PurpleSoundCo/Images/gallery/25_r9e07q.jpg'}
+                  src={'PurpleSoundCo/Images/gallery/25_r9e07q'}
                   width={1920}
                   height={1080}
                   alt={
@@ -80,7 +80,7 @@ function Process({}: Props) {
               </div>
               <div className="process-wrap">
                 <CldImage
-                  src={'PurpleSoundCo/Images/gallery/18_huvh0b.jpg'}
+                  src={'PurpleSoundCo/Images/gallery/18_huvh0b'}
                   width={1920}
                   height={1080}
                   alt={
@@ -94,7 +94,7 @@ function Process({}: Props) {
             <div className="process">
               <div className="process-wrap">
                 <CldImage
-                  src={'PurpleSoundCo/Images/gallery/20_tnarny.jpg'}
+                  src={'PurpleSoundCo/Images/gallery/20_tnarny'}
                   width={1920}
                   height={1080}
                   alt={
@@ -124,7 +124,7 @@ function Process({}: Props) {
               </div>
               <div className="process-wrap">
                 <CldImage
-                  src={'PurpleSoundCo/Images/gallery/6_zz4csq.jpg'}
+                  src={'PurpleSoundCo/Images/gallery/6_zz4csq'}
                   width={1920}
                   height={1080}
                   alt={'Photo of a blue, high-quality music studio mixing desk'}
