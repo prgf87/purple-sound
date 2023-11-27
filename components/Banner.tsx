@@ -16,6 +16,7 @@ function Banner({ heading, message, image }: Props) {
         src={image}
         width={1920}
         height={1080}
+        sizes="100w"
         className="h-[60vh] bg-[#33294A] opacity-40 object-cover"
       />
       <div className="absolute z-[1] grid mx-auto max-w-5xl">

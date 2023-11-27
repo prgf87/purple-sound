@@ -47,6 +47,7 @@ function Header({}: Props) {
             src="https://res.cloudinary.com/dzitj9wug/image/upload/v1701065833/PurpleSoundCo/Images/img1_zzcl5g.png"
             width={50}
             height={50}
+            sizes="5w"
             alt="/"
             className="object-cover h-10 w-10 rounded-full"
           />
@@ -96,9 +97,6 @@ function Header({}: Props) {
       </div>
 
       <div
-        // className={`absolute left-0 top-0 right-0 bottom-0 bg-black z-0 ${
-        //   !nav ? 'overscroll-none right-0' : 'left-[-100%]'
-        // }`}
         className={`absolute top-0 right-0 bg-black ${
           nav
             ? 'overscroll-none fixed right-0 opacity-100 h-screen w-screen ease-out'
@@ -113,10 +111,10 @@ function Header({}: Props) {
               className="border-2 border-gray-300/10 rounded-full hover:border-gray-300/20 active:border-gray-300/40"
             >
               <CldImage
-                // deliveryType="fetch"
                 src="https://res.cloudinary.com/dzitj9wug/image/upload/v1701065833/PurpleSoundCo/Images/img1_zzcl5g.png"
                 width={50}
                 height={50}
+                sizes="5w"
                 alt="/"
                 className="object-cover h-16 w-16 rounded-full"
               />

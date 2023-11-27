@@ -12,6 +12,7 @@ function Brand({ link, image, name }: Props) {
         alt={name}
         width={180}
         height={50}
+        sizes="20w"
         className="object-contain h-24"
         style={{ color: 'white' }}
       />
