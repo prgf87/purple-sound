@@ -6,8 +6,11 @@ import Process from '@/components/Process';
 import Contact from '@/components/Contact';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Dispatch, SetStateAction } from 'react';
 
-export default function Home() {
+type Props = { nav: Boolean; setNav: Dispatch<SetStateAction<boolean>> };
+
+export default function Home({ nav, setNav }: Props) {
   return (
     <>
       <Head>
@@ -36,7 +39,7 @@ export default function Home() {
         <div id="contact">
           <Contact />
         </div>
-        <Footer />
+        <Footer nav={nav} setNav={setNav} />
       </main>
     </>
   );

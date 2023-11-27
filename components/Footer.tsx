@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 
-type Props = { nav: Boolean; setNav: any };
+type Props = { nav: Boolean; setNav: Dispatch<SetStateAction<boolean>> };
 
 function Footer({ nav, setNav }: Props) {
   return (
