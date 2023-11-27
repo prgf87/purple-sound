@@ -1,10 +1,5 @@
-import Image from 'next/image';
 import React from 'react';
-import img1 from '@/public/images/gallery/19.jpg';
-import img2 from '@/public/images/gallery/25.jpg';
-import img3 from '@/public/images/gallery/18.jpg';
-import img4 from '@/public/images/gallery/20.jpg';
-import img5 from '@/public/images/gallery/6.jpg';
+import { CldImage } from 'next-cloudinary';
 
 type Props = {};
 
@@ -26,12 +21,30 @@ function Process({}: Props) {
               </p>
             </div>
             <div className="process-wrap">
-              <Image src={img1} alt={'brand image'} className="process-img" />
+              <CldImage
+                width={1920}
+                height={1080}
+                src={'PurpleSoundCo/Images/gallery/19_aoz6xv.jpg'}
+                alt={
+                  'Photo of a laptop on a wooden desk with some people gesturing at it'
+                }
+                className="process-img"
+                sizes="100vw"
+              />
             </div>
           </div>
           <div className="process">
             <div className="process-wrap">
-              <Image src={img2} alt={'brand image'} className="process-img" />
+              <CldImage
+                src={'PurpleSoundCo/Images/gallery/25_r9e07q.jpg'}
+                width={1920}
+                height={1080}
+                alt={
+                  'Photo of two people pointing at a laptop on a wodden desk'
+                }
+                className="process-img"
+                sizes="100vw"
+              />
             </div>
             <div className="process-wrap">
               <h1 className="text-3xl sm:text-5xl text-left">
@@ -53,12 +66,30 @@ function Process({}: Props) {
               </p>
             </div>
             <div className="process-wrap">
-              <Image src={img3} alt={'brand image'} className="process-img" />
+              <CldImage
+                src={'PurpleSoundCo/Images/gallery/18_huvh0b.jpg'}
+                width={1920}
+                height={1080}
+                alt={
+                  'Photo of a wooden desk with many people sitting around it, working with laptops. Other things are on the desk such as mobile phones, a bowl of snacks, cup of coffee, some headphones, phone charger and a tea pot'
+                }
+                className="process-img"
+                sizes="100vw"
+              />
             </div>
           </div>
           <div className="process">
             <div className="process-wrap">
-              <Image src={img4} alt={'brand image'} className="process-img" />
+              <CldImage
+                src={'PurpleSoundCo/Images/gallery/20_tnarny.jpg'}
+                width={1920}
+                height={1080}
+                alt={
+                  'Photo of a broadcast studio with two microphones setup for recording and two pairs of headphones on  wooden desk. You can see another studio beyond the room through the clear glass wall that separates this studio from the controller'
+                }
+                className="process-img"
+                sizes="100vw"
+              />
             </div>
             <div className="process-wrap">
               <h1 className="text-3xl sm:text-5xl text-left">Installation</h1>
@@ -79,7 +110,14 @@ function Process({}: Props) {
               </p>
             </div>
             <div className="process-wrap">
-              <Image src={img5} alt={'brand image'} className="process-img" />
+              <CldImage
+                src={'PurpleSoundCo/Images/gallery/6_zz4csq.jpg'}
+                width={1920}
+                height={1080}
+                alt={'Photo of a blue, high-quality music studio mixing desk'}
+                className="process-img"
+                sizes="100vw"
+              />
             </div>
           </div>
         </section>
