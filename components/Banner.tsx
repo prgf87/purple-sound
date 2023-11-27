@@ -14,8 +14,9 @@ function Banner({ heading, message, image }: Props) {
       <CldImage
         alt={message}
         src={image}
-        width={1920}
-        height={1080}
+        width="1920"
+        height="1080"
+        zoom="0.5"
         sizes="100w"
         className="h-[60vh] bg-[#33294A] opacity-40 object-cover"
       />
