@@ -24,21 +24,21 @@ function Process({}: Props) {
           <section className="grid grid-cols-1 mx-auto py-4 z-10">
             <div className="process">
               <div className="process-wrap">
-                <h1 className="text-3xl sm:text-5xl text-right">
+                <h1 className="text-5xl sm:text-7xl text-right">
                   consultation
                 </h1>
                 <p className="process-p text-right">
                   We begin with a in-depth consultation to understand your{' '}
-                  <span className="font-extrabold uppercase text-sm tracking-normal text-teal-500">
+                  <span className="font-bold uppercase text-sm md:text-3xl tracking-normal text-red-500">
                     vision
                   </span>
                   ,{' '}
-                  <span className="font-extrabold uppercase text-sm tracking-normal text-teal-500">
+                  <span className="font-bold uppercase text-sm md:text-3xl tracking-normal text-orange-500">
                     goals
                   </span>
-                  ,{' '}
-                  <span className="font-extrabold uppercase text-sm tracking-normal text-teal-500">
-                    and space
+                  , and{' '}
+                  <span className="font-bold uppercase text-sm md:text-3xl tracking-normal text-yellow-500">
+                    space
                   </span>
                   .
                 </p>
@@ -70,13 +70,13 @@ function Process({}: Props) {
                 />
               </div>
               <div className="process-wrap">
-                <h1 className="text-3xl sm:text-5xl text-left">
+                <h1 className="text-5xl sm:text-7xl text-left">
                   Design & Planning
                 </h1>
                 <p className="process-p text-left">
                   Our team crafts a detailed plan, incorporating the best
                   technology and techniques to achieve the{' '}
-                  <span className="font-extrabold uppercase text-sm tracking-normal text-rose-500">
+                  <span className="font-bold uppercase text-sm md:text-3xl tracking-normal text-rose-500">
                     best sound
                   </span>{' '}
                   experience.
@@ -85,20 +85,20 @@ function Process({}: Props) {
             </div>
             <div className="process">
               <div className="process-wrap">
-                <h1 className="text-3xl sm:text-5xl text-right">
+                <h1 className="text-5xl sm:text-7xl text-right">
                   collaboration
                 </h1>
                 <p className="process-p text-right">
                   We{' '}
-                  <span className="font-extrabold uppercase text-sm tracking-normal text-orange-500">
+                  <span className="font-bold uppercase text-sm md:text-3xl tracking-normal text-orange-500">
                     involve you
                   </span>{' '}
                   throughout the process to ensure{' '}
-                  <span className="font-extrabold uppercase text-sm tracking-normal text-teal-500">
+                  <span className="font-bold uppercase text-sm md:text-3xl tracking-normal text-teal-500">
                     your vision
                   </span>{' '}
-                  is realized to its{' '}
-                  <span className="font-extrabold uppercase text-sm tracking-normal text-lime-500">
+                  reaches its{' '}
+                  <span className="font-bold uppercase text-sm md:text-3xl tracking-normal text-lime-500">
                     fullest potential
                   </span>
                   .
@@ -131,11 +131,11 @@ function Process({}: Props) {
                 />
               </div>
               <div className="process-wrap">
-                <h1 className="text-3xl sm:text-5xl text-left">Installation</h1>
+                <h1 className="text-5xl sm:text-7xl text-left">Installation</h1>
                 <p className="process-p text-left">
                   We execute the installation with precision, ensuring every
                   element is{' '}
-                  <span className="font-extrabold uppercase text-sm tracking-normal text-blue-500">
+                  <span className="font-bold uppercase text-sm md:text-3xl tracking-normal text-blue-500">
                     seamlessly integrated.
                   </span>
                 </p>
@@ -143,16 +143,19 @@ function Process({}: Props) {
             </div>
             <div className="process">
               <div className="process-wrap">
-                <h1 className="text-3xl sm:text-5xl text-right">
+                <h1 className="text-5xl sm:text-7xl text-right">
                   Testing & Calibrating
                 </h1>
                 <p className="process-p text-right">
-                  Our experts meticulously calibrate the system for{' '}
-                  <span className="font-extrabold uppercase text-sm tracking-normal text-red-500">
+                  <span className="font-bold uppercase text-sm md:text-3xl tracking-normal text-blue-500">
+                    Our experts
+                  </span>{' '}
+                  meticulously calibrate the system for{' '}
+                  <span className="font-bold uppercase text-sm md:text-3xl tracking-normal text-green-500">
                     optimal performance
                   </span>{' '}
                   and{' '}
-                  <span className="font-extrabold uppercase text-sm tracking-normal text-green-500">
+                  <span className="font-bold uppercase text-sm md:text-3xl tracking-normal text-yellow-500">
                     user experience.
                   </span>
                 </p>
