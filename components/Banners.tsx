@@ -13,6 +13,7 @@ function Banners({}: Props) {
           <Banner
             key={i}
             customBg={ban.customBg}
+            image={ban.image}
             heading={ban.heading}
             message={ban.message}
           />

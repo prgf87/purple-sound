@@ -1,15 +1,23 @@
 import React from 'react';
-import ContactButton from './ContactButton';
 import { CldImage } from 'next-cloudinary';
 
-type Props = { customBg: string; heading: string; message: string };
+type Props = {
+  customBg: string;
+  heading: string;
+  message: string;
+  image: string;
+};
 
-function Banner({ customBg, heading, message }: Props) {
+function Banner({ heading, message, image }: Props) {
   return (
-    <div
-      className={`${customBg} h-[60vh] z-0 flex justify-center items-center`}
-    >
-      <div className="w-full bg-[#33294A] opacity-40 z-0 h-full " />
+    <div className={`flex justify-center items-center`}>
+      <CldImage
+        alt={message}
+        src={image}
+        width={1920}
+        height={1080}
+        className="h-[60vh] bg-[#33294A] opacity-40 object-cover"
+      />
       <div className="absolute z-[1] grid mx-auto max-w-5xl">
         <h1 className="text-white text-5xl sm:text-7xl text-center drop-shadow-2xl pb-10">
           {heading}
