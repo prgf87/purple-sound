@@ -179,7 +179,7 @@ export default function Contact() {
           <input
             placeholder="Date of Event"
             value={date}
-            className="contact-input"
+            className="contact-input text-gray-400"
             type="date"
             required
             onChange={(e) => setDate(e.target.value)}
@@ -230,11 +230,11 @@ export default function Contact() {
               </button>
               {!name || !email || !subject || !location || !date || !message ? (
                 <div
-                  className={`${`hidden group-hover:block`}  absolute z-10 mt-0.5 bg-[#33294A]/90 shadow-md rounded-md p-4`}
+                  className={`${`hidden group-hover:block`}  absolute z-10 bg-[#33294A]/80 shadow-md rounded-md p-4`}
                 >
-                  <p className="text-white text-xs text-center">
-                    There are some fields missing, <br />
-                    please fill them in
+                  <p className="text-white/80 font-bold text-xs text-center px-2 py-1">
+                    There are some fields missing, please fill them in before
+                    trying to submit the message.
                   </p>
                 </div>
               ) : null}
