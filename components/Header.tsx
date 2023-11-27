@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Footer from './Footer';
+import { CldImage } from 'next-cloudinary';
 
 type Props = {};
 
@@ -42,8 +43,8 @@ function Header({}: Props) {
           href={'/'}
           className="border-2 border-gray-300/10 rounded-full hover:border-gray-300/20 active:border-gray-300/40"
         >
-          <Image
-            src="/images/img1.png"
+          <CldImage
+            src="https://res.cloudinary.com/dzitj9wug/image/upload/v1701065833/PurpleSoundCo/Images/img1_zzcl5g.png"
             width={50}
             height={50}
             alt="/"
@@ -111,8 +112,9 @@ function Header({}: Props) {
               onClick={() => setNav(!nav)}
               className="border-2 border-gray-300/10 rounded-full hover:border-gray-300/20 active:border-gray-300/40"
             >
-              <Image
-                src="/images/img1.png"
+              <CldImage
+                // deliveryType="fetch"
+                src="https://res.cloudinary.com/dzitj9wug/image/upload/v1701065833/PurpleSoundCo/Images/img1_zzcl5g.png"
                 width={50}
                 height={50}
                 alt="/"
