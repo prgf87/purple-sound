@@ -60,7 +60,7 @@ export default function Contact() {
           body: JSON.stringify({
             name: name,
             email: email,
-            companyName: companyName ? companyName : 'No company provided',
+            companyName: companyName ? companyName : 'N/A',
             location: location,
             date: date,
             subject: subject,

@@ -1,12 +1,12 @@
 import ContactButton from '@/components/ContactButton';
 import Header from '@/components/Header';
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 
-type Props = {};
+type Props = { nav: Boolean; setNav: Dispatch<SetStateAction<boolean>> };
 
-const page404 = (props: Props) => {
+const page404 = ({ nav, setNav }: Props) => {
   return (
     <main className="max-h-full max-w-[100vw] overflow-hidden">
       <Header />
@@ -21,7 +21,7 @@ const page404 = (props: Props) => {
           </Link>
         </p>
       </div>
-      <Footer />
+      <Footer nav={nav} setNav={setNav} />
     </main>
   );
 };
