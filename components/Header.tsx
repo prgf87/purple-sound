@@ -44,7 +44,7 @@ function Header({}: Props) {
           className="border-2 border-gray-300/10 rounded-full hover:border-gray-300/20 active:border-gray-300/40"
         >
           <CldImage
-            src="https://res.cloudinary.com/dzitj9wug/image/upload/v1701065833/PurpleSoundCo/Images/img1_zzcl5g.png"
+            src="PurpleSoundCo/Images/img1_zzcl5g"
             width={50}
             height={50}
             sizes="5w"
@@ -111,7 +111,7 @@ function Header({}: Props) {
               className="border-2 border-gray-300/10 rounded-full hover:border-gray-300/20 active:border-gray-300/40"
             >
               <CldImage
-                src="https://res.cloudinary.com/dzitj9wug/image/upload/v1701065833/PurpleSoundCo/Images/img1_zzcl5g.png"
+                src="PurpleSoundCo/Images/img1_zzcl5g"
                 width={50}
                 height={50}
                 sizes="5w"
