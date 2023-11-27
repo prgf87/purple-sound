@@ -12,6 +12,7 @@ function Process({}: Props) {
         src={data.intro.process[0]['bg-image']}
         width={1920}
         height={1080}
+        sizes="100w"
         className="h-[220vh] bg-black opacity-40 object-cover"
       />
       <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/50 z-[2]" />
@@ -129,7 +130,7 @@ function Process({}: Props) {
                   height={1080}
                   alt={'Photo of a blue, high-quality music studio mixing desk'}
                   className="process-img"
-                  sizes="100vw"
+                  sizes="25w"
                 />
               </div>
             </div>
