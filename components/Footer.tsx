@@ -7,7 +7,14 @@ function Footer({ nav, setNav }: Props) {
   return (
     <div className="py-20 border-t-2 flex justify-center items-center text-center bg-black/90">
       <div className="grid mx-auto">
-        <Link href={'/#hero'} onClick={() => setNav(!nav)}>
+        <Link
+          href={'/#hero'}
+          onClick={() => {
+            if (nav) {
+              setNav(!nav);
+            }
+          }}
+        >
           <h1 className="text-5xl sm:text-7xl hover:text-slate-400">
             Purple Sound Company
           </h1>

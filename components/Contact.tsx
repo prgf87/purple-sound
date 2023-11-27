@@ -108,11 +108,11 @@ export default function Contact() {
 
   return (
     <div className="flex justify-center items-center pb-10">
-      <div className="sm:space-y-4 flex flex-col mt-10 px-8 sm:px-0">
+      <div className="sm:space-y-4 flex flex-col mt-10 px-8 lg:px-0">
         <div className="space-y-2">
           <h1 className="text-7xl text-center">Contact Us</h1>
           <div>
-            <p>
+            <p className="text-center px-28">
               We would love to hear from you. Please fill out the form below and
               we&apos;ll get back to you as soon as possible.
             </p>

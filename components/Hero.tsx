@@ -13,15 +13,15 @@ function Hero({}: Props) {
         playsInline
         autoPlay
         loop
-        className="object-cover h-[100vh] w-[100vw]  overflow-hidden"
+        className="object-cover h-[100vh] w-[100vw] overflow-hidden"
       >
         <source src="/video/bgvideo-comp.mp4" type="video/mp4" />
       </video>
       <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/70 z-0" />
       <div className="absolute flex">
-        <h1 className="text-7xl z-[2]">Purple Sound</h1>
+        <h1 className="text-7xl z-0">Purple Sound</h1>
 
-        <h2 className="text-xs pt-1 uppercase z-[2]">Company</h2>
+        <h2 className="text-xs pt-1 uppercase z-0">Company</h2>
       </div>
 
       <ContactButton />
