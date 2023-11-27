@@ -5,64 +5,64 @@
         "heading": "High-Fidelity Audio Systems",
         "message": "Immerse yourself in a world of unparalleled sound quality with our range of high-fidelity audio systems, designed to reproduce music and audio content with utmost precision.",
         "customBg": "custom-img4",
-        "image": "PurpleSoundCo/Images/gallery/11_fstl6a.jpg"
+        "image": "PurpleSoundCo/Images/gallery/11_fstl6a"
       },
       {
         "heading": "Experience Professional Audio",
         "message": "From recording studios to live events, our professional-grade equipment ensures that every note and sound is captured with unparalleled clarity.",
         "customBg": "custom-img2",
-        "image": "PurpleSoundCo/Images/gallery/8_ihfdbw.jpg"
+        "image": "PurpleSoundCo/Images/gallery/8_ihfdbw"
       },
       {
         "heading": "Discover Audio Excellence",
         "message": "Whether you're seeking state-of-the-art sound systems, acoustical consulting, or bespoke solutions, we invite you to embark on a journey of sonic perfection with us.",
         "customBg": "custom-img",
-        "image": "PurpleSoundCo/Images/gallery/7_wpiotf.jpg"
+        "image": "PurpleSoundCo/Images/gallery/7_wpiotf"
       },
       {
         "heading": "Innovative Acoustic Solutions",
         "message": "Elevate your space with our cutting-edge acoustic treatments, meticulously engineered to enhance sound quality and eliminate unwanted noise.",
         "customBg": "custom-img3",
-        "image": "PurpleSoundCo/Images/gallery/9_fq7617.jpg"
+        "image": "PurpleSoundCo/Images/gallery/9_fq7617"
       }
     ],
     "brands": [
       {
         "name": "Funktion One",
         "link": "https://funktion-one.com/",
-        "image": "/images/brands/funktion-white.png"
+        "image": "PurpleSoundCo/Images/brands/funktion-white_t6ehh4"
       },
       {
         "name": "Martin Audio",
         "link": "https://martin-audio.com/",
-        "image": "/images/brands/ma-white.png"
+        "image": "PurpleSoundCo/Images/brands/ma-white_hvyfhp"
       },
       {
         "name": "Pioneer",
         "link": "https://www.pioneer.eu/",
-        "image": "/images/brands/pioneer-white.svg"
+        "image": "PurpleSoundCo/Images/brands/pioneer-white_pszfxn"
       },
       {
         "name": "Allen&Heath",
         "link": "https://www.allen-heath.com/",
-        "image": "/images/brands/aNh.png"
+        "image": "PurpleSoundCo/Images/brands/aNh_tqqjke"
       },
       {
         "name": "ffa",
         "link": "http://www.fullfataudio.com/",
-        "image": "/images/brands/ffa-white.png"
+        "image": "PurpleSoundCo/Images/brands/ffa-white_wadcxc"
       },
       {
         "name": "Matrix",
         "link": "https://www.matrix-digi.com/",
-        "image": "/images/brands/matrix-white.png"
+        "image": "PurpleSoundCo/Images/brands/matrix-white_diaqsq"
       },
       {
         "name": "Midas",
         "link": "https://www.midasconsoles.com/",
-        "image": "/images/brands/midas-white.jpg"
+        "image": "PurpleSoundCo/Images/brands/midas-white_gkf8ey"
       }
     ],
-    "process": [{ "bg-image": "PurpleSoundCo/Images/gallery/1_ifpslv.jpg" }]
+    "process": [{ "bg-image": "PurpleSoundCo/Images/gallery/1_ifpslv" }]
   }
 }

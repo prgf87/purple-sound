@@ -112,7 +112,7 @@ export default function Contact() {
         <div className="space-y-2">
           <h1 className="text-7xl text-center">Contact Us</h1>
           <div>
-            <p className="text-center px-28">
+            <p className="text-center px-28 lg:px-0">
               We would love to hear from you. Please fill out the form below and
               we&apos;ll get back to you as soon as possible.
             </p>
@@ -202,25 +202,42 @@ export default function Contact() {
           {sentEmail ? (
             <p className="btn4-dis text-center">Message sent</p>
           ) : (
-            <button
-              className={
-                !name || !email || !subject || !location || !date || !message
-                  ? `btn4-dis`
-                  : `btn4`
-              }
-              disabled={
-                sentEmail ||
-                !name ||
-                !email ||
-                !subject ||
-                !location ||
-                !date ||
-                !message
-              }
-              type="submit"
-            >
-              {loading ? <LoadingSpinner /> : 'Submit'}
-            </button>
+            <div className="group relative flex justify-center">
+              <button
+                className={`w-1/2 
+                  ${
+                    !name ||
+                    !email ||
+                    !subject ||
+                    !location ||
+                    !date ||
+                    !message
+                      ? `btn4-dis`
+                      : `btn4`
+                  }`}
+                disabled={
+                  sentEmail ||
+                  !name ||
+                  !email ||
+                  !subject ||
+                  !location ||
+                  !date ||
+                  !message
+                }
+                type="submit"
+              >
+                {loading ? <LoadingSpinner /> : 'Submit'}
+              </button>
+              {!name || !email || !subject || !location || !date || !message ? (
+                <div
+                  className={`${`hidden group-hover:block`}  absolute z-10 mt-2 bg-[#33294A]/90 shadow-md rounded-md p-4`}
+                >
+                  <p className="text-white text-xs">
+                    There are some fields missing, please fill them in
+                  </p>
+                </div>
+              ) : null}
+            </div>
           )}
         </form>
       </div>
