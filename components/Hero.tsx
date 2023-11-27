@@ -15,7 +15,7 @@ function Hero({}: Props) {
         loop
         className="object-cover h-[100vh] w-[100vw] overflow-hidden"
       >
-        <source src="/video/bgvideo-comp.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/dzitj9wug/video/upload/v1701065707/PurpleSoundCo/Video/bgvideo-comp_c9k2hn.mp4" />
       </video>
       <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/70 z-0" />
       <div className="absolute flex">

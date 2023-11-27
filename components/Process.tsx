@@ -6,14 +6,14 @@ type Props = {};
 
 function Process({}: Props) {
   return (
-    <div className="relative z-0 w-[100vw] bg-gradient-to-t from-black/5 to-black/50">
+    <div className="relative z-0 w-[100vw] bg-gradient-to-t from-black/0 to-black/50">
       <CldImage
         alt={'Confetti machine background photo from inside a night club event'}
         src={data.intro.process[0]['bg-image']}
         width="1920"
         height="1080"
-        sizes="100w"
-        className="h-[220vh] bg-black opacity-40 object-cover"
+        sizes="100h"
+        className="h-[220vh] bg-gradient-to-b from-black/90 to-black/0 opacity-40 object-cover"
       />
       <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/50 z-[2]" />
       <div className="absolute left-0 top-0 right-0 bottom-0">
@@ -24,7 +24,7 @@ function Process({}: Props) {
           <section className="grid grid-cols-1 mx-auto py-4 z-10">
             <div className="process">
               <div className="process-wrap">
-                <h1 className="text-5xl sm:text-7xl text-right">
+                <h1 className="text-4xl sm:text-7xl text-right">
                   consultation
                 </h1>
                 <p className="process-p text-right">
@@ -70,7 +70,7 @@ function Process({}: Props) {
                 />
               </div>
               <div className="process-wrap">
-                <h1 className="text-5xl sm:text-7xl text-left">
+                <h1 className="text-4xl sm:text-7xl text-left">
                   Design & Planning
                 </h1>
                 <p className="process-p text-left">
@@ -85,7 +85,7 @@ function Process({}: Props) {
             </div>
             <div className="process">
               <div className="process-wrap">
-                <h1 className="text-5xl sm:text-7xl text-right">
+                <h1 className="text-4xl sm:text-7xl text-right">
                   collaboration
                 </h1>
                 <p className="process-p text-right">
@@ -131,7 +131,7 @@ function Process({}: Props) {
                 />
               </div>
               <div className="process-wrap">
-                <h1 className="text-5xl sm:text-7xl text-left">Installation</h1>
+                <h1 className="text-4xl sm:text-7xl text-left">Installation</h1>
                 <p className="process-p text-left">
                   We execute the installation with precision, ensuring every
                   element is{' '}
@@ -143,7 +143,7 @@ function Process({}: Props) {
             </div>
             <div className="process">
               <div className="process-wrap">
-                <h1 className="text-5xl sm:text-7xl text-right">
+                <h1 className="text-4xl sm:text-7xl text-right">
                   Testing & Calibrating
                 </h1>
                 <p className="process-p text-right">
