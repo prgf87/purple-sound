@@ -11,7 +11,7 @@ function Brands({}: Props) {
   return (
     <div className="relative py-20 px-8 text-center bg-[#33294A]/30">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-5xl">some of the Brands we work with</h1>
+        <h1 className="text-6xl">some of the products we use</h1>
         <div className="flex flex-1 flex-wrap space-x-2 justify-around items-center">
           {brands
             .sort((a, b) => {
