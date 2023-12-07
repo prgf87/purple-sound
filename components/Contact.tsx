@@ -22,9 +22,9 @@ export default function Contact() {
   const { executeRecaptcha } = useReCaptcha();
 
   const submitHandler = async (e: any) => {
-    e.preventDefault();
-    setLoading(true);
     try {
+      e.preventDefault();
+      setLoading(true);
       const token = await executeRecaptcha('form_submit');
       if (token.length > 20) {
         const res = await fetch('/api/captcha', {
@@ -39,47 +39,44 @@ export default function Contact() {
         if (parsedRes.message === 'Success') {
           console.log('here me now! ');
           setCaptcha(true);
-        }
-      }
-      if (captcha === true) {
-        const response = await fetch('/api/mail', {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json, text/plain, */*',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name: name,
-            email: email,
-            companyName: companyName ? companyName : 'N/A',
-            location: location,
-            date: date,
-            subject: subject,
-            message: message,
-          }),
-        });
-        const parsedRes = await response.json();
+          const response = await fetch('/api/mail', {
+            method: 'POST',
+            headers: {
+              Accept: 'application/json, text/plain, */*',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              name: name,
+              email: email,
+              companyName: companyName ? companyName : 'N/A',
+              location: location,
+              date: date,
+              subject: subject,
+              message: message,
+            }),
+          });
+          const resParsed = await response.json();
 
-        if (parsedRes.message === 'Email sent successfully') {
-          setSuccess(true);
-          setSentEmail(true);
-          setOpen(true);
-          setName('');
-          setEmail('');
-          setSubject('');
-          setMessage('');
-          setCompanyName('');
-          setDate('');
-          setLocation('');
-        } else {
-          setOpen(true);
+          if (resParsed.message === 'Email sent successfully') {
+            setLoading(false);
+            setSuccess(true);
+            setSentEmail(true);
+            setOpen(true);
+            setName('');
+            setEmail('');
+            setSubject('');
+            setMessage('');
+            setCompanyName('');
+            setDate('');
+            setLocation('');
+          }
         }
       }
     } catch (err) {
       console.error(err);
-      alert('Sorry, something went wrong, please try again.');
+      setOpen(true);
+      // alert('Sorry, something went wrong, please try again.');
     } finally {
-      setLoading(false);
       return;
     }
   };
