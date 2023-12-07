@@ -37,7 +37,6 @@ export default function Contact() {
         });
         const parsedRes = await res.json();
         if (parsedRes.message === 'Success') {
-          console.log('here me now! ');
           setCaptcha(true);
           const response = await fetch('/api/mail', {
             method: 'POST',

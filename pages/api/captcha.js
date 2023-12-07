@@ -2,7 +2,6 @@ const key = process.env.RECAPTCHA_SECRET;
 
 export default async function handler(req, res) {
   const { token } = req.body;
-  console.log(token);
   const response = await fetch(
     `https://www.google.com/recaptcha/api/siteverify?secret=${key}&response=${token}`,
     {
