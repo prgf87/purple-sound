@@ -24,78 +24,55 @@ export default function Contact() {
   const submitHandler = async (e: any) => {
     e.preventDefault();
     setLoading(true);
+
     const token = await executeRecaptcha('form_submit');
-    if (token.length > 0) {
-      try {
-        const res = await fetch('/api/captcha', {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json, text/plain, */*',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ token: token }),
-        });
-        const parsedRes = await res.json();
-        console.log('###############ParsedRes: \n', parsedRes);
-        if (parsedRes.message === 'Success') {
-          setCaptcha(true);
-        } else {
-          setLoading(false);
-          return;
-        }
-      } catch (err) {
-        console.error(err);
-        setLoading(false);
-      }
-    }
 
     try {
-      if (captcha === true) {
-        const response = await fetch('/api/mail', {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json, text/plain, */*',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name: name,
-            email: email,
-            companyName: companyName ? companyName : 'N/A',
-            location: location,
-            date: date,
-            subject: subject,
-            message: message,
-          }),
-        });
+      const res = await fetch('/api/captcha', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json, text/plain, */*',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ token: token }),
+      });
+      const parsedRes = await res.json();
+      if (parsedRes.message === 'Success') {
+        setCaptcha(true);
+        if (captcha === true) {
+          const response = await fetch('/api/mail', {
+            method: 'POST',
+            headers: {
+              Accept: 'application/json, text/plain, */*',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              name: name,
+              email: email,
+              companyName: companyName ? companyName : 'N/A',
+              location: location,
+              date: date,
+              subject: subject,
+              message: message,
+            }),
+          });
+          const parsedRes = await response.json();
 
-        const parsedRes = await response.json();
-
-        if (parsedRes.message !== 'Success') {
-          setOpen(!open);
+          if (parsedRes.message === 'Email sent successfully') {
+            setSuccess(true);
+            setSentEmail(true);
+            setOpen(true);
+            setName('');
+            setEmail('');
+            setSubject('');
+            setMessage('');
+            setCompanyName('');
+            setDate('');
+            setLocation('');
+          } else {
+            setOpen(true);
+          }
         }
-        // if (response.status === 200) {
-        // alert('Message sent, thanks for getting in touch.');
-
-        // } else {
-        //   const errorResponse = await response.json();
-        //   alert(
-        //     errorResponse.message || 'Something went wrong, please try again.'
-        //   );
-        //   return;
-        // }
-      } else {
-        console.log('######Success!!#######');
-        setSuccess(!success);
-        setSentEmail(!sentEmail);
-        setOpen(!open);
-        setName('');
-        setEmail('');
-        setSubject('');
-        setMessage('');
-        setCompanyName('');
-        setDate('');
-        setLocation('');
-        return;
       }
     } catch (err) {
       console.error(err);
