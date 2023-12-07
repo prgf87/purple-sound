@@ -22,23 +22,26 @@ export default function Contact() {
   const { executeRecaptcha } = useReCaptcha();
 
   const submitHandler = async (e: any) => {
-    // e.preventDefault();
+    e.preventDefault();
     setLoading(true);
-
-    const token = await executeRecaptcha('form_submit');
-
     try {
-      const res = await fetch('/api/captcha', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json, text/plain, */*',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ token: token }),
-      });
-      const parsedRes = await res.json();
-      if (parsedRes.message === 'Success') {
-        setCaptcha(true);
+      const token = await executeRecaptcha('form_submit');
+      if (token.length > 20) {
+        const res = await fetch('/api/captcha', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json, text/plain, */*',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ token: token }),
+        });
+        const parsedRes = await res.json();
+        if (parsedRes.message === 'Success') {
+          console.log('here me now! ');
+          setCaptcha(true);
+        }
+      }
+      if (captcha === true) {
         const response = await fetch('/api/mail', {
           method: 'POST',
           headers: {
