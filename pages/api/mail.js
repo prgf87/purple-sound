@@ -1,4 +1,3 @@
-import { send } from 'process';
 import { sendMail } from '../../utils/mailer';
 
 const handler = async (req, res) => {
