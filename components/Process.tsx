@@ -5,18 +5,38 @@ import data from '@/data/data.json';
 type Props = {};
 
 function Process({}: Props) {
+  const bgImage = data.intro.process[0]['bg-image'];
+
   return (
-    <div className="relative z-0 w-[100vw] bg-gradient-to-t from-black/0 to-black/50">
+    <div className="relative z-0 w-[100vw] bg-gradient-to-t from-black/0 to-black/100 overflow-hidden">
       <CldImage
-        alt={'Confetti machine background photo from inside a night club event'}
-        src={data.intro.process[0]['bg-image']}
+        alt={
+          'Background photo from inside a night club event and lots of confetti.'
+        }
+        src={
+          'https://res.cloudinary.com/dzitj9wug/image/upload/v1701065829/PurpleSoundCo/Images/gallery/1_ifpslv.jpg'
+        }
         width="1920"
         height="1080"
-        sizes="100h"
-        className="h-[250vh] bg-gradient-to-b from-black/90 to-black/0 opacity-40 object-cover"
+        className="min-h-screen absolute  left-0 top-0 right-0 bottom-0 bg-gradient-to-b from-black/90 to-black/0 opacity-40 object-cover"
       />
-      <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/50 z-[2]" />
-      <div className="absolute left-0 top-0 right-0 bottom-0">
+      <CldImage
+        alt={
+          'Background photo from inside a night club event and lots of confetti.'
+        }
+        src={
+          'https://res.cloudinary.com/dzitj9wug/image/upload/v1701065829/PurpleSoundCo/Images/gallery/1_ifpslv.jpg'
+        }
+        width="1920"
+        height="1080"
+        className="min-h-screen absolute  left-0 top-[50%] right-0 bottom-0 bg-gradient-to-b from-black/90 to-black/0 opacity-40 object-cover rotate-180"
+      />
+      {/* <img
+        className="absolute bg-repeat"
+        src="https://res.cloudinary.com/dzitj9wug/image/upload/v1701065829/PurpleSoundCo/Images/gallery/1_ifpslv.jpg"
+      /> */}
+      <div className="bg-black/50 z-[2]" />
+      <div className="">
         <div className="grid mx-auto max-w-5xl justify-center items-center">
           <div className="w-full flex justify-center items-center z-10">
             <h1 className="text-center pt-20">our process</h1>

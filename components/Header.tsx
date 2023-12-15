@@ -41,7 +41,7 @@ function Header({}: Props) {
       >
         <Link
           href={'/'}
-          className="border-2 border-gray-300/10 rounded-full hover:border-gray-300/20 active:border-gray-300/40"
+          className="border-2 border-gray-300/10 rounded-full hover:border-gray-300/20 active:border-gray-300/60"
         >
           <CldImage
             src="PurpleSoundCo/Images/img1_zzcl5g"
