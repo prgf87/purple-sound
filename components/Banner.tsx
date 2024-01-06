@@ -1,5 +1,5 @@
-import React from 'react';
-import { CldImage } from 'next-cloudinary';
+import React from "react";
+import { CldImage } from "next-cloudinary";
 
 type Props = {
   customBg: string;
@@ -18,7 +18,7 @@ function Banner({ heading, message, image }: Props) {
         height="1080"
         zoom="0.5"
         sizes="100w"
-        className="h-[60vh] bg-[#33294A] opacity-40 object-cover"
+        className="h-[60vh] w-[100%] bg-[#33294A] opacity-40 object-cover"
       />
       <div className="absolute z-[1] grid mx-auto max-w-5xl">
         <h1 className="text-white text-5xl sm:text-7xl text-center drop-shadow-2xl pb-10">
