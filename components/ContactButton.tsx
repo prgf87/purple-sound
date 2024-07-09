@@ -1,9 +1,7 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 
-type Props = {};
-
-const ContactButton = (props: Props) => {
+const ContactButton = () => {
   return (
     <div className="absolute bottom-20">
       <Link href="/#contact" className="btn">

@@ -1,9 +1,9 @@
-import React from 'react';
-import { TailSpin } from 'react-loader-spinner';
+import React from "react";
+import { TailSpin } from "react-loader-spinner";
 
 function LoadingSpinner() {
   return (
-    <div className="w-full flex justify-center items-center py-0 z-20">
+    <div className="z-20 flex w-full items-center justify-center py-0">
       <TailSpin
         height="50"
         width="50"

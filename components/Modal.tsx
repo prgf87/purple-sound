@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 type Props = {
   open: Boolean;
@@ -10,10 +10,10 @@ function Modal({ open, setOpen, success }: Props) {
   if (success === true) {
     return (
       <div
-        className="border text-card-foreground w-full max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden z-50"
+        className="text-card-foreground z-50 mx-auto w-full max-w-md overflow-hidden rounded-lg border bg-white shadow-lg"
         data-v0-t="card"
       >
-        <div className="flex justify-center mt-8">
+        <div className="mt-8 flex justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -37,9 +37,9 @@ function Modal({ open, setOpen, success }: Props) {
             enquiry as soon as we can.
           </p>
         </div>
-        <div className="px-8 py-4 flex justify-end">
+        <div className="flex justify-end px-8 py-4">
           <button
-            className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            className="ring-offset-background focus-visible:ring-ring border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-10 items-center justify-center rounded-md border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
             onClick={() => setOpen(!open)}
           >
             Close
@@ -50,10 +50,10 @@ function Modal({ open, setOpen, success }: Props) {
   } else {
     return (
       <div
-        className="border text-card-foreground w-full max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden z-50"
+        className="text-card-foreground z-50 mx-auto w-full max-w-md overflow-hidden rounded-lg border bg-white shadow-lg"
         data-v0-t="card"
       >
-        <div className="flex justify-center mt-8">
+        <div className="mt-8 flex justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -75,18 +75,18 @@ function Modal({ open, setOpen, success }: Props) {
           <h1 className="text-5xl">Something went wrong..</h1>
           <p className="mt-2 text-zinc-500 dark:text-zinc-400">
             Something went wrong, please try again. Alternatively, you can
-            contact us directly on{' '}
+            contact us directly on{" "}
             <a
               href="mailto:info@purplesoundco.com"
-              className="underline text-blue-400 hover:text-blue-600"
+              className="text-blue-400 underline hover:text-blue-600"
             >
               info@purplesoundco.com
             </a>
           </p>
         </div>
-        <div className="px-8 py-4 flex justify-end">
+        <div className="flex justify-end px-8 py-4">
           <button
-            className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:brightness-75 h-10 px-4 py-2"
+            className="ring-offset-background focus-visible:ring-ring border-input bg-background hover:bg-accent inline-flex h-10 items-center justify-center rounded-md border px-4 py-2 text-sm font-medium transition-colors hover:brightness-75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
             onClick={() => setOpen(!open)}
           >
             Close
