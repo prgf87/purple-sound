@@ -47,10 +47,11 @@ function Banners({}: Props) {
               </h3>
               <p className="pt-4 text-base  text-left">
                 Step into our state-of-the-art recording studio and bring your
-                musical vision to life. Whether you're a solo artist or a full
-                band, our acoustically-treated space and top-notch equipment
-                ensure your sound is captured with pristine clarity. Book your
-                session today and experience the difference quality makes.
+                musical vision to life. Whether you&apos;re a solo artist or a
+                full band, our acoustically-treated space and top-notch
+                equipment ensure your sound is captured with pristine clarity.
+                Book your session today and experience the difference quality
+                makes.
               </p>
             </div>
             <div className="mt-8 flex flex-col border p-4 rounded-xl shadow-md">
@@ -64,8 +65,8 @@ function Banners({}: Props) {
                 Unlock your musical potential with our expert tutors. From
                 beginners to advanced players, we offer bespoke lessons tailored
                 to your goals and learning style. Guitar, piano, drums, or
-                vocals—whatever your instrument, we're here to help you master
-                it. Start your musical journey with us today.
+                vocals—whatever your instrument, we&apos;re here to help you
+                master it. Start your musical journey with us today.
               </p>
             </div>
             <div className="mt-8 flex flex-col border p-4 rounded-xl shadow-md">
@@ -78,11 +79,11 @@ function Banners({}: Props) {
                 </span>
               </h3>
               <p className="pt-4 text-base  text-left">
-                In today's digital landscape, your sound is just the beginning.
-                Our marketing wizards and social media gurus are here to amplify
-                your presence and connect you with your audience. Let us craft a
-                strategy that puts your talent centre stage and builds your
-                brand.
+                In today&apos;s digital landscape, your sound is just the
+                beginning. Our marketing wizards and social media gurus are here
+                to amplify your presence and connect you with your audience. Let
+                us craft a strategy that puts your talent centre stage and
+                builds your brand.
               </p>
             </div>
             <div className="my-8 flex flex-col border p-4 rounded-xl shadow-md">
@@ -110,8 +111,8 @@ function Banners({}: Props) {
               <p className="pt-4 text-base  text-left">
                 Elevate your live performances or recording sessions with our
                 skilled sound engineers. With years of experience and an ear for
-                perfection, they'll ensure your sound is balanced, clear, and
-                impactful. Focus on your performance while we focus on
+                perfection, they&apos;ll ensure your sound is balanced, clear,
+                and impactful. Focus on your performance while we focus on
                 delivering audio excellence.
               </p>
             </div>
@@ -127,7 +128,7 @@ function Banners({}: Props) {
                 with our mixing and mastering services. Our seasoned engineers
                 use cutting-edge technology to balance, enhance, and perfect
                 your sound, giving your music the professional edge it deserves.
-                Let us help you create a product that's ready for the world
+                Let us help you create a product that&apos;s ready for the world
                 stage.
               </p>
             </div>
