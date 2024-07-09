@@ -1,5 +1,5 @@
-import React from "react";
-import { CldImage } from "next-cloudinary";
+import React from 'react';
+import { CldImage } from 'next-cloudinary';
 
 type Props = {
   customBg: string;
@@ -24,8 +24,8 @@ function Banner({ heading, message, image }: Props) {
         <h1 className="text-white text-5xl sm:text-7xl text-center drop-shadow-2xl pb-10">
           {heading}
         </h1>
-        <div className="px-16 sm:px-28">
-          <p className="text-white font-bold text-xl sm:text-3xl text-center tracking-tighter">
+        <div className="px-8 sm:px-28">
+          <p className="text-white font-bold text-lg sm:text-3xl text-center">
             {message}
           </p>
         </div>
