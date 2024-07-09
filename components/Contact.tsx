@@ -95,13 +95,13 @@ export default function Contact() {
           </div>
         </div>
 
-        {open ? (
+        {open && (
           <div className="absolute left-0 right-0">
             <div className="relative top-32">
               <Modal open={open} setOpen={setOpen} success={success} />
             </div>
           </div>
-        ) : null}
+        )}
 
         <form
           onSubmit={submitHandler}
@@ -208,7 +208,7 @@ export default function Contact() {
                 <div
                   className={`${`hidden group-hover:block`}  absolute z-10 bg-[#33294A]/80 shadow-md rounded-md p-4`}
                 >
-                  <p className="text-white/80 font-bold text-xs text-center px-2 py-1">
+                  <p className="text-white/80 font-bold text-base text-center px-2 py-2">
                     There are some fields missing, please fill them in before
                     trying to submit the message.
                   </p>

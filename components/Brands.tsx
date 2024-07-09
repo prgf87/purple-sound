@@ -29,9 +29,9 @@ function Brands({}: Props) {
               );
             })}
         </div>
-        <div className="flex justify-center items-center pt-20">
+        {/* <div className="flex justify-center items-center pt-20">
           <ContactButton />
-        </div>
+        </div> */}
       </div>
     </div>
   );

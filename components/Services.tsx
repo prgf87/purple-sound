@@ -1,20 +1,19 @@
 import React from 'react';
 import Banner from './Banner';
 import data from '@/data/data.json';
-import Link from 'next/link';
 import { BiPurchaseTagAlt } from 'react-icons/bi';
 import { SlMusicToneAlt } from 'react-icons/sl';
 import { SiAltiumdesigner, SiGooglemarketingplatform } from 'react-icons/si';
 import { RiSoundModuleFill } from 'react-icons/ri';
-// import { PiUserSoundBold } from 'react-icons/pi';
 import { MdOutlineEngineering } from 'react-icons/md';
+import Link from 'next/link';
 
 type Props = {};
 
 function Banners({}: Props) {
   const { banners } = data.intro;
   return (
-    <div className="z-0">
+    <div className="z-0 shadow-xl">
       <div id="services" className="relative -top-16" />
       {banners.map((ban, i) => {
         return (
@@ -28,12 +27,10 @@ function Banners({}: Props) {
         );
       })}
       <div className="max-w-screen mx-auto p-8 ">
-        <div id="services" className="relative top-[-100px]" />
-
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="pb-4 text-white text-3xl">Our Services</h1>
+          <h1 className="py-4 text-white text-3xl">Our Services</h1>
           <div>
-            <h1 className="text-5xl sm:text-7xl text-center drop-shadow-2xl pb-10">
+            <h1 className="text-5xl sm:text-7xl text-center drop-shadow-2xl ">
               Taking the Hassle out of the Process
             </h1>
           </div>
@@ -133,11 +130,11 @@ function Banners({}: Props) {
               </p>
             </div>
           </div>
-          {/* <div className="pt-4">
-            <Link href={'/#portfolio'}>
-              <button className="btn-3">Our Portfolio</button>
+          <div className="pt-4">
+            <Link href={'/#contact'}>
+              <button className="btn">Contact Us</button>
             </Link>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
