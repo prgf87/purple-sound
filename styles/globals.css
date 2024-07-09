@@ -6,6 +6,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  @apply scrollbar  scrollbar-corner-stone-800 scrollbar-track-[#33294A] scrollbar-thumb-slate-100;
 }
 html {
   @apply text-[#B5E2FA] bg-[#33294A];
@@ -28,7 +29,7 @@ h3 {
 }
 
 .btn {
-  @apply border-2 border-black/10 px-8 py-2 rounded-lg bg-white/10 text-white uppercase font-semibold hover:brightness-110 hover:border-black/20 active:border-black/30 transition-all duration-300;
+  @apply border-2 border-black/10 px-8 py-2 rounded-lg bg-white/10 text-white uppercase font-semibold hover:brightness-110 hover:border-black/20 active:border-black/30 transition-all duration-300 hover:bg-white/30;
 }
 
 .btn2 {
@@ -68,19 +69,19 @@ h3 {
 }
 
 .process {
-  @apply bg-[#33294A]/90 rounded-2xl min-h-[350px] p-4 sm:p-10 m-4 shadow-xl border border-gray-600/30 grid grid-cols-2 gap-x-8;
+  @apply bg-[#33294A]/90 rounded-2xl h-[450px]  m-4 shadow-xl border border-gray-600/30 grid sm:grid-cols-2 gap-x-8;
 }
 
 .process-wrap {
-  @apply m-auto;
+  @apply m-auto p-4;
 }
 
 .process-p {
-  @apply text-sm sm:text-base;
+  @apply sm:text-xl;
 }
 
 .process-img {
-  @apply sm:w-[400px] h-80 sm:h-60 object-cover object-center rounded-2xl shadow-2xl;
+  @apply h-60 sm:w-[400px] sm:h-[350px] object-cover object-center rounded-2xl shadow-2xl;
 }
 
 .error {
