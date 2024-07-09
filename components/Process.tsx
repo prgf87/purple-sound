@@ -15,7 +15,7 @@ function Process({}: Props) {
         width="1920"
         height="1080"
         sizes="100%"
-        className="absolute left-0 top-0 right-0 bottom-0 bg-gradient-to-b from-black/90 to-black/0 opacity-40 object-cover"
+        className="absolute h-full left-0 top-0 right-0 bottom-0 bg-gradient-to-b from-black/90 to-black/0 opacity-40 object-cover"
       />
       <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/50 z-[2]" />
       <div className=" left-0 top-0 right-0 bottom-0">
