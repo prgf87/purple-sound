@@ -6,70 +6,74 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  @apply scrollbar  scrollbar-corner-stone-800 scrollbar-track-[#33294A] scrollbar-thumb-slate-100;
+  @apply scrollbar scrollbar-track-[#33294A] scrollbar-thumb-slate-100 scrollbar-corner-stone-800;
 }
 html {
-  @apply text-[#B5E2FA] bg-[#33294A];
+  @apply bg-[#33294A] text-[#B5E2FA];
 }
 
 h1 {
-  text-shadow: -1px 2 black, 2 1px black, 1px 2 black, 2 -1px black;
-  font-family: 'Bebas Neue', cursive;
-  @apply tracking-tight text-7xl uppercase;
+  text-shadow:
+    -1px 2 black,
+    2 1px black,
+    1px 2 black,
+    2 -1px black;
+  font-family: "Bebas Neue", cursive;
+  @apply text-7xl uppercase tracking-tight;
 }
 
 h2 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   @apply tracking-wide;
 }
 
 h3 {
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
   @apply tracking-wide;
 }
 
 .btn {
-  @apply border-2 border-black/10 px-8 py-2 rounded-lg bg-white/10 text-white uppercase font-semibold hover:brightness-110 hover:border-black/20 active:border-black/30 transition-all duration-300 hover:bg-white/30;
+  @apply rounded-lg border-2 border-black/10 bg-white/10 px-8 py-2 font-semibold uppercase text-white transition-all duration-300 hover:border-black/20 hover:bg-white/30 hover:brightness-110 active:border-black/30;
 }
 
 .btn2 {
-  @apply border-2 border-black/10 px-8 py-2 rounded-2xl bg-[#33294A]/10 text-white uppercase font-semibold hover:brightness-110 hover:border-black/30 active:border-black/50 transition-all duration-100 text-xs;
+  @apply rounded-2xl border-2 border-black/10 bg-[#33294A]/10 px-8 py-2 text-xs font-semibold uppercase text-white transition-all duration-100 hover:border-black/30 hover:brightness-110 active:border-black/50;
 }
 
 .btn3 {
-  @apply px-3 sm:px-6 py-2 border border-slate-800 rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-slate-500/70 hover:text-slate-100/80;
+  @apply rounded-full border border-slate-800 px-3 py-2 text-xs uppercase tracking-widest text-gray-500 transition-all hover:border-slate-500/70 hover:text-slate-100/80 sm:px-6;
 }
 
 .btn4 {
-  @apply px-10 py-5 border bg-slate-400/70 border-slate-600 rounded-md uppercase tracking-widest text-gray-300 transition-all hover:border-slate-300/70 hover:text-slate-400/80 text-lg font-bold;
+  @apply rounded-md border border-slate-600 bg-slate-400/70 px-10 py-5 text-lg font-bold uppercase tracking-widest text-gray-300 transition-all hover:border-slate-300/70 hover:text-slate-400/80;
 }
 .btn4-dis {
-  @apply px-10 py-5 border bg-slate-400/30 border-slate-600 rounded-md uppercase tracking-widest text-gray-100/30 transition-all text-lg font-bold;
+  @apply rounded-md border border-slate-600 bg-slate-400/30 px-10 py-5 text-lg font-bold uppercase tracking-widest text-gray-100/30 transition-all;
 }
 
 .intro-boxes-img,
 .intro-boxes-p {
-  @apply border border-spacing-1 border-slate-300/70 bg-slate-900/20 p-4 rounded-3xl shadow-lg m-5;
+  @apply m-5 border-spacing-1 rounded-3xl border border-slate-300/70 bg-slate-900/20 p-4 shadow-lg;
 }
 
 .intro-boxes-p {
-  @apply flex justify-center items-center text-lg tracking-tighter;
+  @apply flex items-center justify-center text-lg tracking-tighter;
 }
 
 .service-box {
-  @apply border border-spacing-1 border-slate-300/70 bg-slate-900/20 p-4 rounded-3xl shadow-lg m-5;
+  @apply m-5 border-spacing-1 rounded-3xl border border-slate-300/70 bg-slate-900/20 p-4 shadow-lg;
 }
 
 .header-link {
-  @apply text-xs hover:brightness-90 active:brightness-110 active:opacity-100 tracking-tighter opacity-80;
+  @apply text-xs tracking-tighter opacity-80 hover:brightness-90 active:opacity-100 active:brightness-110;
 }
 
 .nav-link {
-  @apply text-3xl hover:brightness-90 active:brightness-110 uppercase tracking-wider;
+  @apply text-3xl uppercase tracking-wider hover:brightness-90 active:brightness-110;
 }
 
 .process {
-  @apply bg-[#33294A]/90 rounded-2xl h-[450px]  m-4 shadow-xl border border-gray-600/30 grid sm:grid-cols-2 gap-x-8;
+  @apply m-4 grid h-[450px] gap-x-8 rounded-2xl border border-gray-600/30 bg-[#33294A]/90 shadow-xl sm:grid-cols-2;
 }
 
 .process-wrap {
@@ -81,7 +85,7 @@ h3 {
 }
 
 .process-img {
-  @apply h-60 sm:w-[400px] sm:h-[350px] object-cover object-center rounded-2xl shadow-2xl;
+  @apply h-60 rounded-2xl object-cover object-center shadow-2xl sm:h-[350px] sm:w-[400px];
 }
 
 .error {
@@ -97,39 +101,39 @@ h3 {
 }
 
 .input-field {
-  @apply w-[100vw] p-2 m-20;
+  @apply m-20 w-[100vw] p-2;
 }
 
 .contact-input {
-  @apply outline-none w-full bg-slate-100/90 rounded-sm border-b px-6 py-4 border-gray-400 transition-all text-gray-800 focus:border-gray-300/60;
+  @apply w-full rounded-sm border-b border-gray-400 bg-slate-100/90 px-6 py-4 text-gray-800 outline-none transition-all focus:border-gray-300/60;
 }
 
 .custom-img {
-  background-image: url('https://res.cloudinary.com/dzitj9wug/image/upload/v1701065852/PurpleSoundCo/Images/gallery/7_wpiotf.jpg');
+  background-image: url("https://res.cloudinary.com/dzitj9wug/image/upload/v1701065852/PurpleSoundCo/Images/gallery/7_wpiotf.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .custom-img2 {
-  background-image: url('https://res.cloudinary.com/dzitj9wug/image/upload/v1701065852/PurpleSoundCo/Images/gallery/8_ihfdbw.jpg');
+  background-image: url("https://res.cloudinary.com/dzitj9wug/image/upload/v1701065852/PurpleSoundCo/Images/gallery/8_ihfdbw.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .custom-img3 {
-  background-image: url('https://res.cloudinary.com/dzitj9wug/image/upload/v1701065853/PurpleSoundCo/Images/gallery/9_fq7617.jpg');
+  background-image: url("https://res.cloudinary.com/dzitj9wug/image/upload/v1701065853/PurpleSoundCo/Images/gallery/9_fq7617.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .custom-img4 {
-  background-image: url('https://res.cloudinary.com/dzitj9wug/image/upload/v1701065861/PurpleSoundCo/Images/gallery/11_fstl6a.jpg');
+  background-image: url("https://res.cloudinary.com/dzitj9wug/image/upload/v1701065861/PurpleSoundCo/Images/gallery/11_fstl6a.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .bg-img {
-  background-image: url('/images/gallery/1.jpg');
+  background-image: url("/images/gallery/1.jpg");
   background-position: center;
   background-size: cover;
 }

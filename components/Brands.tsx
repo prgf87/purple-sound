@@ -1,18 +1,15 @@
-import React from 'react';
-import data from '@/data/data.json';
-import Brand from './Brand';
-import ContactButton from './ContactButton';
+import React from "react";
+import data from "@/data/data.json";
+import Brand from "./Brand";
 
-type Props = {};
-
-function Brands({}: Props) {
+function Brands() {
   const { brands } = data.intro;
 
   return (
-    <div className="relative py-20 px-8 text-center bg-[#33294A]/30">
-      <div className="max-w-5xl mx-auto">
+    <div className="relative bg-[#33294A]/30 px-8 py-20 text-center">
+      <div className="mx-auto max-w-5xl">
         <h1 className="text-6xl">some of the products we use</h1>
-        <div className="flex flex-1 flex-wrap space-x-2 justify-around items-center">
+        <div className="flex flex-1 flex-wrap items-center justify-around space-x-2">
           {brands
             .sort((a, b) => {
               return a.name.localeCompare(b.name);

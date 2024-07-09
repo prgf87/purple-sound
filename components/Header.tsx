@@ -1,47 +1,46 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
-import Footer from './Footer';
-import { CldImage } from 'next-cloudinary';
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import Footer from "./Footer";
+import { CldImage } from "next-cloudinary";
 
 type Props = {};
 
 function Header({}: Props) {
   const [nav, setNav] = useState(false);
-  const [color, setColor] = useState('transparent');
-  const [textColor, setTextColor] = useState('#B5E2FA');
+  const [color, setColor] = useState("transparent");
+  const [textColor, setTextColor] = useState("#B5E2FA");
 
-  if (typeof document !== 'undefined') {
-    const body = document.querySelector('body');
+  if (typeof document !== "undefined") {
+    const body = document.querySelector("body");
     if (nav === true) {
-      body!.style.overflow = 'hidden';
+      body!.style.overflow = "hidden";
     } else {
-      body!.style.overflow = 'auto';
+      body!.style.overflow = "auto";
     }
   }
 
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
-        setColor('#33294A');
-        setTextColor('#ffffff');
+        setColor("#33294A");
+        setTextColor("#ffffff");
       } else {
-        setColor('transparent');
-        setTextColor('#B5E2FA');
+        setColor("transparent");
+        setTextColor("#B5E2FA");
       }
     };
-    window.addEventListener('scroll', changeColor);
+    window.addEventListener("scroll", changeColor);
   }, []);
 
   return (
     <div>
       <div
         style={{ backgroundColor: `${color}`, color: `${textColor}` }}
-        className="flex justify-between items-center py-4 px-10 ease-in-out duration-300"
+        className="flex items-center justify-between px-10 py-4 duration-300 ease-in-out"
       >
         <Link
-          href={'/'}
-          className="border-2 border-gray-300/10 rounded-full hover:border-gray-300/20 active:border-gray-300/40"
+          href={"/"}
+          className="rounded-full border-2 border-gray-300/10 hover:border-gray-300/20 active:border-gray-300/40"
         >
           <CldImage
             src="PurpleSoundCo/Images/img1_zzcl5g"
@@ -49,28 +48,28 @@ function Header({}: Props) {
             height={50}
             sizes="5w"
             alt="/"
-            className="object-cover h-10 w-10 rounded-full"
+            className="h-10 w-10 rounded-full object-cover"
           />
         </Link>
         <div className="hidden sm:flex">
           <ul className="flex space-x-5">
             <li className="header-link">
-              <Link href={'/'}>Home</Link>
+              <Link href={"/"}>Home</Link>
             </li>
             <li className="header-link">
-              <Link href={'/#services'}>Services </Link>
+              <Link href={"/#services"}>Services </Link>
             </li>
             <li className="header-link">
-              <Link href={'/#process'}>Our Process </Link>
+              <Link href={"/#process"}>Our Process </Link>
             </li>
             <li className="header-link">
-              <Link href={'/#contact'}>Contact </Link>
+              <Link href={"/#contact"}>Contact </Link>
             </li>
           </ul>
         </div>
         <div className="sm:hidden">
           <button
-            className="inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full"
+            className="ring-offset-background focus-visible:ring-ring hover:bg-accent hover:text-accent-foreground inline-flex h-10 w-10 items-center justify-center rounded-full text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
             onClick={() => {
               setNav(!nav);
             }}
@@ -85,7 +84,7 @@ function Header({}: Props) {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="w-6 h-6"
+              className="h-6 w-6"
             >
               <line x1="4" x2="20" y1="12" y2="12"></line>
               <line x1="4" x2="20" y1="6" y2="6"></line>
@@ -97,18 +96,18 @@ function Header({}: Props) {
       </div>
 
       <div
-        className={`absolute top-0 right-0 bg-black ${
+        className={`absolute right-0 top-0 bg-black ${
           nav
-            ? 'overscroll-none fixed right-0 opacity-100 h-screen w-screen ease-out'
-            : 'fixed right-[-105%] top-0 w-10 opacity-50'
-        } transition-all ease-out duration-500`}
+            ? "fixed right-0 h-screen w-screen overscroll-none opacity-100 ease-out"
+            : "fixed right-[-105%] top-0 w-10 opacity-50"
+        } transition-all duration-500 ease-out`}
       >
-        <div className="text-white flex justify-center items-stretch mt-80 text-center">
+        <div className="mt-80 flex items-stretch justify-center text-center text-white">
           <div className="absolute top-20">
             <Link
-              href={'/'}
+              href={"/"}
               onClick={() => setNav(!nav)}
-              className="border-2 border-gray-300/10 rounded-full hover:border-gray-300/20 active:border-gray-300/40"
+              className="rounded-full border-2 border-gray-300/10 hover:border-gray-300/20 active:border-gray-300/40"
             >
               <CldImage
                 src="PurpleSoundCo/Images/img1_zzcl5g"
@@ -116,34 +115,34 @@ function Header({}: Props) {
                 height={50}
                 sizes="5w"
                 alt="/"
-                className="object-cover h-16 w-16 rounded-full"
+                className="h-16 w-16 rounded-full object-cover"
               />
             </Link>
           </div>
           <ul className="space-y-5">
             <li className="nav-link">
-              <Link href={'/'} onClick={() => setNav(!nav)}>
+              <Link href={"/"} onClick={() => setNav(!nav)}>
                 Home
               </Link>
             </li>
             <li className="nav-link">
-              <Link href={'/#services'} onClick={() => setNav(!nav)}>
-                Services{' '}
+              <Link href={"/#services"} onClick={() => setNav(!nav)}>
+                Services{" "}
               </Link>
             </li>
             <li className="nav-link">
-              <Link href={'/#process'} onClick={() => setNav(!nav)}>
-                Our Process{' '}
+              <Link href={"/#process"} onClick={() => setNav(!nav)}>
+                Our Process{" "}
               </Link>
             </li>
             <li className="nav-link">
-              <Link href={'/#contact'} onClick={() => setNav(!nav)}>
-                Contact{' '}
+              <Link href={"/#contact"} onClick={() => setNav(!nav)}>
+                Contact{" "}
               </Link>
             </li>
           </ul>
         </div>
-        <div className="mt-[20vh] sm:mt[30vh]">
+        <div className="sm:mt[30vh] mt-[20vh]">
           <Footer nav={nav} setNav={setNav} />
         </div>
       </div>
