@@ -45,7 +45,7 @@ h3 {
 }
 
 .btn4 {
-  @apply rounded-md border border-slate-600 bg-slate-400/70 px-10 py-5 text-lg font-bold uppercase tracking-widest text-gray-300 transition-all hover:border-slate-300/70 hover:text-slate-400/80;
+  @apply rounded-md border border-[#4d19c5] bg-[#4d19c5] px-10 py-5 text-lg font-bold uppercase tracking-widest text-gray-300 transition-all hover:border-gray-100 hover:text-gray-100;
 }
 .btn4-dis {
   @apply rounded-md border border-slate-600 bg-slate-400/30 px-10 py-5 text-lg font-bold uppercase tracking-widest text-gray-100/30 transition-all;

@@ -17,7 +17,7 @@ export default function Home({ nav, setNav }: Props) {
         <title>Purple Sound Company</title>
         <meta name="description" content="Purple Sound Company" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="PurpleSoundCo/Images/img1_zzcl5g" />
+        <link rel="ico" href="/favicon.ico" />
       </Head>
       <main className="max-w-[100dvw] overflow-x-hidden">
         <div className="fixed left-0 right-0 top-0 z-10">
