@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
 
 export async function sendMail(
   name,
@@ -7,23 +7,24 @@ export async function sendMail(
   message,
   companyName,
   location,
-  date
+  date,
 ) {
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: "gmail",
     auth: {
       user: process.env.NODEMAILER_EMAIL,
       pass: process.env.NODEMAILER_PW,
     },
   });
 
-  const ukDate = new Date(date).toLocaleDateString('en-GB');
+  const ukDate = new Date(date).toLocaleDateString("en-GB");
 
   const mailOptions = {
     from: email,
     to: process.env.NODEMAILER_EMAIL,
+    // to: process.env.NODEMAILER_EMAIL_OFFICE,
     name: name,
-    subject: subject,
+    subject: `New Enquiry from PurpleSoundCo Website - ${subject}`,
     text: `From: ${name} \nEmail: ${email} \nCompany Name: ${companyName} \nLocation: ${location} \nDate: ${ukDate} \nSubject: ${subject} \nMessage: \n${message}`,
   };
 

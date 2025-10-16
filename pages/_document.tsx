@@ -13,7 +13,7 @@ export default function Document() {
         <meta name="creator" content="Pedro Ferreira" />
 
         {/* Favicon */}
-        <link rel="jpeg" type="image/jpeg" sizes="any" href="/icon.ico" />
+        <link rel="ico" type="image/ico" sizes="any" href="/favicon.ico" />
 
         {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
