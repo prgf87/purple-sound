@@ -1,4 +1,3 @@
-import React from "react";
 import Banner from "./Banner";
 import data from "@/data/data.json";
 import { BiPurchaseTagAlt } from "react-icons/bi";
